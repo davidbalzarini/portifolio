@@ -8,7 +8,7 @@ function Navbar(){
 
 
     return (
-        <>
+        <div className='containernav'>
             <nav className="navbar end">
 
                 
@@ -53,7 +53,7 @@ function Navbar(){
                 </div>
             </nav>
             
-        </>
+        </div>
     );
 }
 

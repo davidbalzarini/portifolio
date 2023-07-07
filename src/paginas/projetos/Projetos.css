@@ -17,10 +17,12 @@
 }
 
 .resumoprojeto2{
-    font-size: 30px;
-    margin-left: 15;
+    font-size: 25px;
+    margin-left: -10vw;
     margin-top: 20vh;
-    margin-right: -10vw;
+    margin-right: 10vw;
+    width: 100%;
+    text-align: left;
 }
 
 .titulo{
@@ -34,10 +36,9 @@
 .titulo2{
     font-size: 40px;
     font-weight: bold;
-    align-items: center;
-    margin-right: -10vw;
+    margin-left: -10vw;
     margin-top: 10vh;
-    margin-left: 5;
+    text-align: left;
     
 
 }
@@ -61,10 +62,24 @@
     cursor: pointer;
 }
 
+
+.containerimg2{
+    height: 600px;
+    margin-left: -200px;
+}
+
 .imgprojeto{
-    height: 500;
-    padding-right: 15vw;
-    margin-left: -10vw;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    border-radius: 200px;
+    margin-left: -400px;
+}
+
+.imgprojeto:hover{
+    border: 10px solid transparent;
+    outline: 5px solid #39ff14;
+    border-radius: 0px;
+    cursor: pointer;
 }
 
 .margintop{
@@ -82,9 +97,27 @@
 
 .tamanho{
     width: 550px;
+    margin-left: auto;
+}
+
+.tamanho2{
+    width: 550px;
+    margin-left: 500px;
 }
 
 
 .topo{
-    
+    margin-top: 10vh;
 }
+
+.containergrid {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas com largura igual */
+    grid-gap: 10px; /* Espaçamento entre as colunas */
+  }
+
+
+  .marigntop{
+    margin-top: 150px;
+  }
