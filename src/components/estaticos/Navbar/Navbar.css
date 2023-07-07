@@ -9,14 +9,20 @@
     
 }
 
-.margin{
-    
-}
-
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.end{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.margin-rigth{
+    margin-right: 50px;
 }
 
 .tm{
@@ -31,14 +37,16 @@
     height: 60px;
     width: 150px;
     transition: 0.5s ease;
-    color: #39ff14
+    color: #39ff14;
+    border: none;
     
 
 }
 
 .btn-design:hover{
-    background-color: #39ff14;
-    color:  #262626;
+    font-size: 20px;
+    border: none;
+    
 }
 
 

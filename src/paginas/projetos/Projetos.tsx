@@ -1,3 +1,4 @@
+
 import './Projetos.css'
 
 function Projetos(){
@@ -9,17 +10,17 @@ function Projetos(){
                     <h1>Projetos em destaque<span className='ponto'>:</span></h1>
                 </div>
                 <div className='flex'>
-                    
+                    <div>
+                        <h2 className='titulo'>
+                            Probem<span className='ponto'>.</span>
+                        </h2>
+                    </div>
                     <div className='flex'>
-                        
-                            <text className='titulo'>
-                                Probem<span className='ponto'>.</span>
-                            </text>
                         <text className='resumoprojeto'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo, molestias voluptatem nesciunt sunt sequi vel reiciendis ipsa, illum quam cum hic quibusdam at nulla officiis placeat numquam fugit perferendis?
                         </text>
                     </div>
-                    <div className='flex'>
+                    <div className='flex containerimg'>
                         <img className='imgprobem' src="probemimg.png" alt="" />
                     </div>
                 </div>
@@ -40,6 +41,9 @@ function Projetos(){
                 <div className='marginbot'>
                     <div></div>
                     <div ></div>
+                </div>
+                <div>
+                    
                 </div>
             </div>
         </>

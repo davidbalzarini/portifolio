@@ -9,7 +9,7 @@ function Navbar(){
 
     return (
         <>
-            <nav className="navbar center">
+            <nav className="navbar end">
 
                 
                 <div className="center menu-section on">
@@ -20,7 +20,7 @@ function Navbar(){
                             <div className="three"></div>
                         </div>
                     </Link>
-                    <div className="margin">
+                    <div >
                         <Link to="inicio"
                         smooth={true}
                         duration={500}>
@@ -42,7 +42,7 @@ function Navbar(){
                             <button className="btn btn-design">Projetos</button>
                         </Link>
                     </div>
-                    <div>
+                    <div className='margin-rigth'>
                         <Link 
                         to="conhecimentos"
                         smooth={true}
