@@ -1,4 +1,66 @@
 .aa{
-    background-color: aqua;
     height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.resumoprojeto{
+    font-size: 30px;
+    margin-left: -10vw;
+    margin-top: 20vh;
+}
+
+.resumoprojeto2{
+    font-size: 30px;
+    margin-left: 15;
+    margin-top: 20vh;
+    margin-right: -10vw;
+}
+
+.titulo{
+    font-size: 40px;
+    font-weight: bold;
+    align-items: center;
+    margin-left: -10vw;
+    margin-top: 10vh;
+    
+
+}
+
+.titulo2{
+    font-size: 40px;
+    font-weight: bold;
+    align-items: center;
+    margin-right: -10vw;
+    margin-top: 10vh;
+    margin-left: 5;
+    
+
+}
+
+.imgprobem{
+    height: 500;
+    margin-right: -10vw;
+    padding-left: 15vw;
+}
+
+.imgprojeto{
+    height: 500;
+    padding-right: 15vw;
+    margin-left: -10vw;
+}
+
+.margintop{
+    margin-top: 10vh;
+}
+
+
+.marginbot{
+    margin-bottom: 110px;
+}
+
+.hidden{
+    visibility: hidden;
 }

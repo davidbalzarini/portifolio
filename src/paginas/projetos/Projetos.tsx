@@ -5,7 +5,43 @@ function Projetos(){
     return (
         <>
             <div id='projetos' className="aa">
-                <text>O lado bom de ser</text>
+                <div>
+                    <h1 className='hidden'>Projetos em destaque<span className='ponto'>:</span></h1>
+                    <h1>Projetos em destaque<span className='ponto'>:</span></h1>
+                </div>
+                <div className='flex'>
+                    
+                    <div className='flex'>
+                        
+                            <text className='titulo'>
+                                Probem<span className='ponto'>.</span>
+                            </text>
+                        <text className='resumoprojeto'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo, molestias voluptatem nesciunt sunt sequi vel reiciendis ipsa, illum quam cum hic quibusdam at nulla officiis placeat numquam fugit perferendis?
+                        </text>
+                    </div>
+                    <div className='flex'>
+                        <img className='imgprobem' src="probemimg.png" alt="" />
+                    </div>
+                </div>
+                <div className='margintop flex'>
+                    <div className='flex'>
+                        <img className='imgprojeto' src="probemimg.png" alt="" />
+                    </div>
+                    <div className='flex'>
+                        
+                            <text className='titulo2'>
+                                Probem<span className='ponto'>.</span>
+                            </text>
+                        <text className='resumoprojeto2'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo, molestias voluptatem nesciunt sunt sequi vel reiciendis ipsa, illum quam cum hic quibusdam at nulla officiis placeat numquam fugit perferendis?
+                        </text>
+                    </div>
+                </div>
+                <div className='marginbot'>
+                    <div></div>
+                    <div ></div>
+                </div>
             </div>
         </>
     )

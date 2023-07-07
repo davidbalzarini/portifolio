@@ -2,7 +2,8 @@
     background: #262626;
     display: flex;
     border-bottom: 2px solid #39ff14;
-
+    position: fixed;
+    top: 0;
     width: 100vw;
     margin-left: -16.5vw;
     
