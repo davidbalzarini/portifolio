@@ -1,4 +1,3 @@
-import Projetos from '../projetos/Projetos';
 import './Inicio.css'
 
 function Inicio(){
@@ -14,7 +13,7 @@ function Inicio(){
             <div className='container'>
                 <div className='divimg'>
                     {/* <img className="gifperfil" src="gif.gif" alt="" /> */}
-                    <img className="imagemperfil" src="4707122.jpg" alt="" />
+                    <img className="imagemperfil" src="fotodavid.jpeg" alt="" />
                 </div>
                 <div>
                     <h1>

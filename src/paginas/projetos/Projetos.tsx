@@ -9,19 +9,19 @@ function Projetos(){
                     <h1 className='hidden'>Projetos em destaque<span className='ponto'>:</span></h1>
                     <h1>Projetos em destaque<span className='ponto'>:</span></h1>
                 </div>
-                <div className='flex'>
+                <div className='flex topo'>
                     <div>
                         <h2 className='titulo'>
                             Probem<span className='ponto'>.</span>
                         </h2>
                     </div>
-                    <div className='flex'>
-                        <text className='resumoprojeto'>
+                    <div className='flex tamanho'>
+                        <p className='resumoprojeto'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo, molestias voluptatem nesciunt sunt sequi vel reiciendis ipsa, illum quam cum hic quibusdam at nulla officiis placeat numquam fugit perferendis?
-                        </text>
+                        </p>
                     </div>
                     <div className='flex containerimg'>
-                        <img className='imgprobem' src="probemimg.png" alt="" />
+                        <a href="https://probemreact.vercel.app/" target="_blank"><img className='imgprobem' src="probemimg.png" alt="" /></a>
                     </div>
                 </div>
                 <div className='margintop flex'>

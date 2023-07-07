@@ -11,6 +11,9 @@
     margin-left: -10vw;
     margin-top: 20vh;
     margin-right: 10vw;
+    width: 100%;
+    text-align: left;
+    
 }
 
 .resumoprojeto2{
@@ -23,9 +26,9 @@
 .titulo{
     font-size: 40px;
     font-weight: bold;
-    align-items: center;
     margin-left: -10vw;
     margin-top: 10vh;
+    text-align: left;
 }
 
 .titulo2{
@@ -39,23 +42,23 @@
 
 }
 
+.containerimg{
+    height: 600px;
+    margin-right: -400px;
+}
+
 .imgprobem{
     height: 100%;
     transition: 0.5s ease-in-out;
-    margin-right: -200px;
     border-radius: 200px;
+    
 }
-
-.containerimg{
-height: 600px;
-}
-
 
 .imgprobem:hover{
-    margin-right: -200px;
     border: 10px solid transparent;
     outline: 5px solid #39ff14;
     border-radius: 0px;
+    cursor: pointer;
 }
 
 .imgprojeto{
@@ -75,4 +78,13 @@ height: 600px;
 
 .hidden{
     visibility: hidden;
+}
+
+.tamanho{
+    width: 550px;
+}
+
+
+.topo{
+    
 }
