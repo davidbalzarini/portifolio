@@ -1,0 +1,28 @@
+.card{
+    background-color: #262626 !important;
+    color: #fff !important;
+    border: 5px solid #39ff14;
+    border-radius: 100px !important;
+    transition: 0.5s ease !important;
+}
+
+.card:hover{
+    border-radius: 0 !important;
+    .fotocard{
+        border-radius: 0;
+    }
+}
+
+    .text-card{
+    background-color: #262626;
+    color: #fff;
+    }
+
+    .fotocard{
+        width: 100%;
+        border-radius: 50px;
+        transition: 1 ease;
+    }
+    .fotocard:hover{
+        border-radius: 0;
+    }

@@ -12,7 +12,6 @@ function Inicio(){
             </div>
             <div className='container'>
                 <div className='divimg'>
-                    {/* <img className="gifperfil" src="gif.gif" alt="" /> */}
                     <img className="imagemperfil" src="fotodavid.jpeg" alt="" />
                 </div>
                 <div>

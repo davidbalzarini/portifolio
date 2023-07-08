@@ -1,0 +1,13 @@
+.containerc{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 100px;
+}
+
+.gridhab{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 20px;
+}
+
+

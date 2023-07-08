@@ -1,4 +1,4 @@
-.aa{
+/* .aa{
     margin-top: -200px !important;
 }
 
@@ -91,9 +91,7 @@
     margin-bottom: 110px;
 }
 
-.hidden{
-    visibility: hidden;
-}
+
 
 .tamanho{
     width: 550px;
@@ -110,14 +108,21 @@
     margin-top: 10vh;
 }
 
-.containergrid {
-    margin-top: 200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas com largura igual */
-    grid-gap: 10px; /* Espaçamento entre as colunas */
-  }
+/*  
 
 
   .marigntop{
     margin-top: 150px;
+  } */
+
+  .hidden{
+    visibility: hidden;
+}
+
+.containergrid {
+    margin-left: -75px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 100px; 
   }
