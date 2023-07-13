@@ -4,56 +4,56 @@ import './Conhecimentos.css'
 export function Conhecimentos(){
 
 
-    const elemento1 = document.getElementById('elemento1') as HTMLElement;
-    const js = document.getElementById('js') as HTMLElement;
-    const ts = document.getElementById('ts') as HTMLElement;
-    const node = document.getElementById('node') as HTMLElement;
-    const react = document.getElementById('react') as HTMLElement;
-    const nest = document.getElementById('nest') as HTMLElement;
+    // const elemento1 = document.getElementById('elemento1') as HTMLElement;
+    // const js = document.getElementById('js') as HTMLElement;
+    // const ts = document.getElementById('ts') as HTMLElement;
+    // const node = document.getElementById('node') as HTMLElement;
+    // const react = document.getElementById('react') as HTMLElement;
+    // const nest = document.getElementById('nest') as HTMLElement;
     // const nest = document.getElementById('react') as HTMLElement;
     
-    js.addEventListener('mouseover', function() {
-      elemento1.textContent = 'javascript é';
-    });
+    // js.addEventListener('mouseover', function() {
+    //   elemento1.textContent = 'javascript é';
+    // });
     
-    js.addEventListener('mouseout', function() {
-        elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
-      });
+    // js.addEventListener('mouseout', function() {
+    //     elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
+    //   });
     
-    ts.addEventListener('mouseover', function() {
-      elemento1.textContent = 'typescript';
-    });
+    // ts.addEventListener('mouseover', function() {
+    //   elemento1.textContent = 'typescript';
+    // });
     
-    ts.addEventListener('mouseout', function() {
-        elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
-      });
+    // ts.addEventListener('mouseout', function() {
+    //     elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
+    //   });
     
-      node.addEventListener('mouseover', function() {
-      elemento1.textContent = 'node';
-    });
+    //   node.addEventListener('mouseover', function() {
+    //   elemento1.textContent = 'node';
+    // });
     
-    node.addEventListener('mouseout', function() {
-        elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
-      });
+    // node.addEventListener('mouseout', function() {
+    //     elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
+    //   });
       
-      react.addEventListener('mouseover', function() {
-      elemento1.textContent = 'react';
-    });
+    //   react.addEventListener('mouseover', function() {
+    //   elemento1.textContent = 'react';
+    // });
 
-    react.addEventListener('mouseout', function() {
-        elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
-      });
+    // react.addEventListener('mouseout', function() {
+    //     elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
+    //   });
     
     
     
     
-      nest.addEventListener('mouseover', function() {
-      elemento1.textContent = 'nest';
-    });
+    //   nest.addEventListener('mouseover', function() {
+    //   elemento1.textContent = 'nest';
+    // });
 
-    nest.addEventListener('mouseout', function() {
-        elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
-      });
+    // nest.addEventListener('mouseout', function() {
+    //     elemento1.textContent = '*passe o mouse por cima de alguma habilidade*';
+    //   });
     
     
     
