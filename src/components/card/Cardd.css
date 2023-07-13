@@ -13,16 +13,16 @@
     }
 }
 
-    .text-card{
+.text-card{
     background-color: #262626;
     color: #fff;
-    }
+}
 
-    .fotocard{
-        width: 100%;
-        border-radius: 50px;
-        transition: 1 ease;
-    }
-    .fotocard:hover{
-        border-radius: 0;
-    }
+.fotocard{
+    width: 100%;
+    border-radius: 50px;
+    transition: 1 ease;
+}
+.fotocard:hover{
+    border-radius: 0;
+}
