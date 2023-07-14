@@ -27,7 +27,7 @@ export function Cardd({project}: Projeto) {
   
 
   return (
-    <Card sx={{ minWidth: 360, height:500 }} className='card'>
+    <Card sx={{ minWidth: 360, minHeight:500 }} className='card'>
       <CardHeader
         title={project.name}
         subheader=""
@@ -35,7 +35,6 @@ export function Cardd({project}: Projeto) {
       <CardMedia
         className='fotocard'
         component="img"
-        height="250"
         image={project.imgUrl}
         alt="Paella dish"
       />

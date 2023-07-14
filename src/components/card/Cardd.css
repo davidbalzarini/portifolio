@@ -2,6 +2,7 @@
     background-color: var(--background) !important;
     color: var(--fonte) !important;
     border: 5px solid var(--green);
+    width: 450px;
     border-radius: 100px !important;
     transition: 0.5s ease !important;
 }
@@ -22,7 +23,28 @@
     width: 100%;
     border-radius: 50px;
     transition: 1 ease;
+    height:250px;
 }
 .fotocard:hover{
     border-radius: 0;
+}
+
+@media(max-width: 430px){
+    .card{
+        height: 1000px;
+        width: 860px;
+        margin-bottom: 50px;
+        
+    }
+    .fotocard{
+        height: 500px
+    }
+
+    .text-card{
+        background-color: var(--background);
+        color: var(--fonte);
+        font-size: 30px !important;
+    }
+
+
 }

@@ -21,9 +21,9 @@ function Inicio(){
                 </div>
                 <div>
                     <div className='.cargo'>
-                        <h1>
+                        <p className='h1'>
                                 Desenvolvedor FullStack<span className='ponto'>.</span>
-                        </h1>
+                        </p>
                     </div>
                     <div className='divtexto'>
                         

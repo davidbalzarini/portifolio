@@ -2,10 +2,11 @@ import { Link } from 'react-scroll';
 import './Navbar.css'
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeToogle/Theme';
+import { Swicht } from '../Swicht/Swicht';
 
 function Navbar(){
 
-    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+    const { isDarkMode } = useContext(ThemeContext);
         
 
 
@@ -23,10 +24,8 @@ function Navbar(){
                             <div className="three"></div>
                         </div>
                     </Link>
-                    <div>
-                    <button onClick={toggleTheme}>
-                        Alternar para o tema {isDarkMode ? 'Claro' : 'Escuro'}
-                    </button>
+                    <div >
+                        {<Swicht />}
                     </div>
                     <div >
                         <Link to="inicio"
