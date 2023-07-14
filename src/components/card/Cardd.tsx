@@ -27,7 +27,7 @@ export function Cardd({project}: Projeto) {
   
 
   return (
-    <Card sx={{ minWidth: 360 }} className='card'>
+    <Card sx={{ minWidth: 360, height:500 }} className='card'>
       <CardHeader
         title={project.name}
         subheader=""

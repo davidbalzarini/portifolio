@@ -1,12 +1,16 @@
+/* #008000
+#000000
+#ffffff */
+
+
+
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
   
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  
+   
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -20,15 +24,19 @@ html{
     left: 0;
 }
 
+.trocatema{
+  color: var(--fonte);  
+}
+
 .containernav{
     width: 100%;
 }
 
 .navbar{
     left: 0;
-    background: #262626;
+    background: var(--background);
     display: flex;
-    border-bottom: 2px solid #39ff14;
+    border-bottom: 2px solid var(--green);
     position: fixed;
     top: 0;
     width: 100%;
@@ -58,12 +66,12 @@ html{
 }
 
 .btn-design{
-    background-color: #262626;
+    background-color: var(--background);
     cursor: pointer;
     height: 60px;
     width: 150px;
     transition: 0.5s ease;
-    color: #39ff14;
+    color: var(--green);
     border: none;
     
 
@@ -85,7 +93,7 @@ html{
     .one,
     .two,
     .three{
-        background-color: #39ff14;
+        background-color: var(--background);
         height: 5px;
         width: 100%;
         margin: 6px auto;

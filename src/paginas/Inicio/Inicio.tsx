@@ -1,8 +1,13 @@
+import { useContext } from 'react';
 import './Inicio.css'
+import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 
 function Inicio(){
+
+    const { isDarkMode } = useContext(ThemeContext);
+
     return(
-        <>
+        <div className={isDarkMode ? 'escuro' : 'claro'}>
             <div id='inicio' className='inicio-margin inicio'>
             <div>
                 <text  className='text-hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dolores perspiciatis reprehenderit, consequuntur aut aspernatur sint tenetur! Nemo ex, perspiciatis asperiores, atque nisi nesciunt rem provident, mollitia enim pariatur facere.</text>  
@@ -15,9 +20,11 @@ function Inicio(){
                     <img className="imagemperfil" src="fotodavid.jpeg" alt="" />
                 </div>
                 <div>
-                    <h1>
-                            Desenvolvedor FullStack<span className='ponto'>.</span>
-                    </h1>
+                    <div className='.cargo'>
+                        <h1>
+                                Desenvolvedor FullStack<span className='ponto'>.</span>
+                        </h1>
+                    </div>
                     <div className='divtexto'>
                         
                         <text className='resumo'>
@@ -30,7 +37,7 @@ function Inicio(){
                 </div>
             </div>
             </div>
-        </>
+        </div>
     )
 }
 export default Inicio;

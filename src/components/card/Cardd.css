@@ -1,7 +1,7 @@
 .card{
-    background-color: #262626 !important;
-    color: #fff !important;
-    border: 5px solid #39ff14;
+    background-color: var(--background) !important;
+    color: var(--fonte) !important;
+    border: 5px solid var(--green);
     border-radius: 100px !important;
     transition: 0.5s ease !important;
 }
@@ -14,8 +14,8 @@
 }
 
 .text-card{
-    background-color: #262626;
-    color: #fff;
+    background-color: var(--background);
+    color: var(--fonte);
 }
 
 .fotocard{

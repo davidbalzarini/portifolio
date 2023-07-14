@@ -4,40 +4,51 @@ import Navbar from './components/estaticos/Navbar/Navbar';
 import Inicio from './paginas/Inicio/Inicio';
 import Projetos from './paginas/projetos/Projetos';
 import { Conhecimentos } from './paginas/conhecimentos/Conhecimentos';
+import { ThemeProvider } from './components/estaticos/ThemeToogle/Theme';
+import { Sobre } from './paginas/Sobre/Sobre';
+
+
 
 
 function App() {
 
+  
+
   return (
-    <>
+    <div >
       
       <Router>
       <div>
-        <Navbar/>
-      </div>
-      
-      <div style={{ minHeight: '100vh' }}>
-        <Inicio/>
-        <Projetos/>
-        <Conhecimentos/>
-        <Routes>
-        
-        
-        
-
-        
-
+        <ThemeProvider>
+          <Navbar/>
+          <Inicio/>
+          <Projetos/>
+          <Sobre/>
+          <Conhecimentos/>
+        </ThemeProvider>
+          </div>
           
-
           
+    
+            <Routes>
+            
+            
+            
 
+            
+
+              
+
+              
+
+              
+
+            </Routes>
           
-
-        </Routes>
-      </div>
+          
       {/* <Footer /> */}
     </Router>
-    </>
+    </div>
   )
 }
 

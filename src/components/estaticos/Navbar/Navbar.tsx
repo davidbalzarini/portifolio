@@ -1,13 +1,16 @@
 import { Link } from 'react-scroll';
 import './Navbar.css'
+import { useContext } from 'react';
+import { ThemeContext } from '../ThemeToogle/Theme';
 
 function Navbar(){
 
-    
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
         
 
 
     return (
+        <div className={isDarkMode ? 'escuro' : 'claro'}>
         <div className='containernav'>
             <nav className="navbar end">
 
@@ -20,6 +23,11 @@ function Navbar(){
                             <div className="three"></div>
                         </div>
                     </Link>
+                    <div>
+                    <button onClick={toggleTheme}>
+                        Alternar para o tema {isDarkMode ? 'Claro' : 'Escuro'}
+                    </button>
+                    </div>
                     <div >
                         <Link to="inicio"
                         smooth={true}
@@ -53,6 +61,7 @@ function Navbar(){
                 </div>
             </nav>
             
+        </div>
         </div>
     );
 }
