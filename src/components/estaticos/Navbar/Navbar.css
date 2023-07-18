@@ -24,6 +24,10 @@ html{
     left: 0;
 }
 
+.none{
+    display: none;
+}
+
 .trocatema{
   color: var(--fonte);  
 }
@@ -86,6 +90,7 @@ html{
 
 
 @media (max-width:425px) {
+
     .btn-design{
         display: none;
     }

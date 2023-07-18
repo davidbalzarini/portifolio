@@ -5,7 +5,7 @@ import { useState, useContext } from 'react';
 
 export function Conhecimentos(){
 
-    const [displayText, setDisplayText] = useState('*passe o moouse por cima de alguma habilidade*');
+    const [displayText, setDisplayText] = useState('*passe o mouse por cima de alguma habilidade*');
     const { isDarkMode } = useContext(ThemeContext);
 
     const handleMouseOverJs = () => {
@@ -41,7 +41,7 @@ export function Conhecimentos(){
     }
 
     const handleMouseOut = () => {
-        setDisplayText('*passe o moouse por cima de alguma habilidade*');
+        setDisplayText('*passe o mouse por cima de alguma habilidade*');
     };
 
 
@@ -59,7 +59,7 @@ export function Conhecimentos(){
                 </div>
                 <div className='gridhab'>
                     <div onMouseOver={handleMouseOverJs} onMouseOut={handleMouseOut}><img width="100" height="100" src="js.png" alt="javascript--v1"/></div>
-                    <div className='mtop' onMouseOver={handleMouseOverTs} onMouseOut={handleMouseOut}><img width="100" height="100" src="ts.png" alt="typescript"/></div>
+                    <div className='mtop' onMouseOver={handleMouseOverTs} onMouseOut={handleMouseOut}><img width="120" height="120" src="ts.png" alt="typescript"/></div>
                     <div onMouseOver={handleMouseOverNode} onMouseOut={handleMouseOut}><img width="100" height="100" src="node.png" alt="node-js"/></div>
                     <div onMouseOver={handleMouseOverNest} onMouseOut={handleMouseOut}><img width="100" height="100" src="nest.png" alt="nestjs"/></div>
                     <div onMouseOver={handleMouseOverHTML} onMouseOut={handleMouseOut}><img width="100" height="100" src="html.png" alt="react"/></div>

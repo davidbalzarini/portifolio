@@ -38,7 +38,7 @@ function Navbar(){
                         <Link to="sobre"
                         smooth={true}
                         duration={500}>
-                            <button className="btn btn-design">Sobre mim</button>
+                            <button className="btn btn-design none">Sobre mim</button>
                         </Link>
                     </div>
                     <div >

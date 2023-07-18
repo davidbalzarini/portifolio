@@ -3,6 +3,42 @@
     margin-bottom: -100px;
 }
 
+.bold{
+    font-weight: bold;
+}
+
+.top{
+    margin-top: -50px;
+}
+
+.buttoncurriculo{
+    font-size: 25px;
+    margin-left: 50px;
+    color: var(--green) !important;
+    border:2px solid var(--green);
+}
+
+.buttonlinkedin{
+    font-size: 25px;
+    margin-left: 50px;
+    color: var(--green) !important;
+    border:2px solid var(--green);
+}
+
+.buttongit{
+    font-size: 25px;
+    margin-left: 50px;
+    color: var(--green) !important;
+    border:2px solid var(--green);
+    transition: 0.2;
+
+}
+
+.buttoncurriculo:hover, .buttongit:hover, .buttonlinkedin:hover{
+    background-color: var(--green);
+    color: var(--background) !important;
+}
+
 
 
 .text{
@@ -79,6 +115,10 @@ html{
     .h1{
         margin-left: -40px;
     }
+
+    .top{
+        margin-left: -100px;
+    }
 }
 
 @media(max-width: 1630px){
@@ -88,6 +128,10 @@ html{
     }
     .divimg{
         margin-left: 150px;
+    }
+    .top{
+        margin-left: -200px;
+        margin-top: -150px;
     }
 }
 
@@ -134,7 +178,7 @@ html{
         width: 1200px;
         height: 30vh;
         display: flex;
-        margin-left: 30vw;
+        margin-left: 10vw;
     }
 
     .container{
@@ -145,6 +189,10 @@ html{
     .resumo{
         font-size: 33px;
         text-align: center;
+    }
+    .top{
+        margin-left: 100px;
+        margin-top: -180px;
     }
 }
 @media(max-width: 325px){

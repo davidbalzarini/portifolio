@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-gap: 100px;
+    margin-bottom: 100px;
 }
 
 .gridhab{
@@ -19,5 +20,5 @@
 }
 
 .mtop{
-    margin-top: 5px;
+    margin-top: -8px;
 }

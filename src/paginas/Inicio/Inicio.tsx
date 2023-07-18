@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './Inicio.css'
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 
+
 function Inicio(){
 
     const { isDarkMode } = useContext(ThemeContext);
@@ -30,9 +31,14 @@ function Inicio(){
                         <text className='resumo'>
                             Me chamo David, tenho 19 anos e sou um desenvolvedor fullstack
                             formado pela generation brasil, domino diversas tecnologias, como por
-                            exemplo javascript, typescript, React.Js, Node.js, React Native, MySQL e 
-                             Nest.js<span className='ponto'>.</span>
+                            exemplo <span className='bold'>Javascript, Typescript, React.Js, Node.js, React Native, MySQL e 
+                             Nest.js<span className='ponto'>.</span></span>
                         </text>
+                    </div>
+                    <div className='top'>
+                        <a  href="https://docs.google.com/document/d/1Qiez3h3-afQys4Dn7ZLETKXnb7IBsb73dg4FKy43BAE/edit?usp=sharing" target='blank'><button className='buttoncurriculo'>Curriculo</button></a>
+                        <a href="https://www.linkedin.com/in/david-balzarini-pereira-645481227/" target='blank'><button className='buttonlinkedin'>Linkedin</button></a>
+                        <a href="https://github.com/davidbalzarini" target='blank'><button className='buttongit'>Github</button></a>
                     </div>
                 </div>
             </div>
