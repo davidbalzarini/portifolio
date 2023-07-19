@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import './Cardd.css'
 import Typography from '@mui/material/Typography';
+import { useContext, useEffect, useState } from 'react';
+import { ThemeContext } from '../estaticos/ThemeToogle/Theme';
 
 
 
@@ -16,7 +18,9 @@ interface Projeto {
   project:{
     imgUrl: string,
     name: string,
-    descreption: string
+    descreption: string,
+    url:string,
+    code:string
   }
 }
 
@@ -24,6 +28,35 @@ interface Projeto {
 
 
 export function Cardd({project}: Projeto) {
+
+  const { isDarkMode } = useContext(ThemeContext);
+
+  const [codfonte, setCodfonte] = useState("codigofonte.png");
+  
+  
+    useEffect(() => {
+      if(isDarkMode == true){
+        return setCodfonte("codigofonte.png")
+      }
+      else{
+        return setCodfonte("codigofonte2.png")
+      }
+    })
+  
+    const [eye, setEye] = useState("olho.png");
+  
+  
+    useEffect(() => {
+      if(isDarkMode == true){
+        return setEye("olho.png")
+      }
+      else{
+        return setEye("olho2.png")
+      }
+    })
+
+    
+  
   
 
   return (
@@ -45,9 +78,10 @@ export function Cardd({project}: Projeto) {
       </CardContent>
       <CardActions disableSpacing>
       </CardActions>
-      <button>
-        
-      </button>
+      <div>
+          <a href={project.url} target='blank'><img className='br' src={eye} alt="" width="30" /></a>
+          <a href={project.code} target='blank'><img className='codfonte br' src={codfonte} alt="" width="30" /></a>
+      </div> 
     </Card>
   );
 }

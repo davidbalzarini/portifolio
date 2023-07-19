@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+}
+
+.footer{
+    border-top:2px solid var(--green);
+    left: 0;
+    background: var(--background);
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerdiv{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.margin{
+    margin-right: 40px !important;
+    margin-left: 20px;
+}
+

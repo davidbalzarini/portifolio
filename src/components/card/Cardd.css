@@ -7,6 +7,13 @@
     transition: 0.5s ease !important;
 }
 
+
+.codfonte{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-left: 50px!important;
+}
+
 .card:hover{
     border-radius: 0 !important;
     .fotocard{

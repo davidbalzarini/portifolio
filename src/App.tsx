@@ -6,6 +6,7 @@ import Projetos from './paginas/projetos/Projetos';
 import { Conhecimentos } from './paginas/conhecimentos/Conhecimentos';
 import { ThemeProvider } from './components/estaticos/ThemeToogle/Theme';
 import { Sobre } from './paginas/Sobre/Sobre';
+import { Footer } from './components/estaticos/Footer/Footer';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Projetos/>
           <Sobre/>
           <Conhecimentos/>
+          <Footer/>
         </ThemeProvider>
           </div>
           
