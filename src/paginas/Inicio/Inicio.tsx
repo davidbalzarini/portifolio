@@ -1,12 +1,14 @@
 import { useContext } from 'react';
 import './Inicio.css'
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
+import { idioma } from '../../components/Idioma/idioma';
 
 
 function Inicio(){
 
     const { isDarkMode } = useContext(ThemeContext);
-
+    
+    
     return(
         <div className={isDarkMode ? 'escuro' : 'claro'}>
             <div id='inicio' className='inicio-margin inicio'>
@@ -23,7 +25,7 @@ function Inicio(){
                 <div>
                     <div className='.cargo'>
                         <p className='h1'>
-                                Desenvolvedor FullStack<span className='ponto'>.</span>
+                                Desenvolvedor FullStack <span className='ponto'>.</span>
                         </p>
                     </div>
                     <div className='divtexto'>

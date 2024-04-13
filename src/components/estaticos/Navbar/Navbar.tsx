@@ -1,13 +1,13 @@
 import { Link } from 'react-scroll';
 import './Navbar.css'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../ThemeToogle/Theme';
 import { Swicht } from '../Swicht/Swicht';
 
 function Navbar(){
 
     const { isDarkMode } = useContext(ThemeContext);
-        
+    const [idioma, setIdioma] = useState('portugues');
 
 
     return (
@@ -49,12 +49,29 @@ function Navbar(){
                             <button className="btn btn-design">Projetos</button>
                         </Link>
                     </div>
+                    
                     <div className='margin-rigth'>
                         <Link 
                         to="conhecimentos"
                         smooth={true}
                         duration={500}>
                             <button className=" btn btn-design">Conhecimentos</button>
+                        </Link>
+                    </div>
+                    <div className='margin-rigth'>
+                        <Link 
+                        to="certificados"
+                        smooth={true}
+                        duration={500}>
+                            <button className=" btn btn-design">Certificados</button>
+                        </Link>
+                    </div>
+                    <div className='margin-rigth'>
+                        <Link 
+                        to="conhecimentos"
+                        smooth={true}
+                        duration={500}>
+                            <button className=" btn btn-design">Idioma: {idioma}</button>
                         </Link>
                     </div>
                 </div>
