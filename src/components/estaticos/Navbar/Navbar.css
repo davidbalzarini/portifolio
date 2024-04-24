@@ -86,10 +86,23 @@ html{
     border: none;
     
 }
+.icon{
+    width: 40px
+}
 
 
 
 @media (max-width:425px) {
+
+    .icon{
+        height: 100px;
+        width: 100px;
+    }
+
+    .navbar{
+        height: 140px;
+    }
+    
 
     .btn-design{
         display: none;

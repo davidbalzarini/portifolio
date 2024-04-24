@@ -1,13 +1,14 @@
 import { Link } from 'react-scroll';
 import './Navbar.css'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../ThemeToogle/Theme';
 import { Swicht } from '../Swicht/Swicht';
+import { LanguageContext, languageTexts } from '../../Idioma/idioma';
 
 function Navbar(){
 
     const { isDarkMode } = useContext(ThemeContext);
-    const [idioma, setIdioma] = useState('portugues');
+    const {language, toggleLanguage} = useContext(LanguageContext)
 
 
     return (
@@ -17,13 +18,13 @@ function Navbar(){
 
                 
                 <div className="center menu-section on">
-                    <Link to='/navmob'>
+                    {/* <Link to='/navmob'>
                         <div className="menu-toggle">
                             <div className="one"></div>
                             <div className="two"></div>
                             <div className="three"></div>
                         </div>
-                    </Link>
+                    </Link> */}
                     <div >
                         {<Swicht />}
                     </div>
@@ -31,14 +32,14 @@ function Navbar(){
                         <Link to="inicio"
                         smooth={true}
                         duration={500}>
-                            <button className="btn-design">Inicio</button>
+                            <button className="btn-design">{language == "pt" ? languageTexts.pt.menu.inicio : languageTexts.en.menu.inicio}</button>
                         </Link>
                     </div>
                     <div >
                         <Link to="sobre"
                         smooth={true}
                         duration={500}>
-                            <button className="btn btn-design none">Sobre mim</button>
+                            <button className="btn btn-design none">{language == "pt" ? languageTexts.pt.menu.sobre : languageTexts.en.menu.sobre}</button>
                         </Link>
                     </div>
                     <div >
@@ -46,7 +47,7 @@ function Navbar(){
                         to="projetos"
                         smooth={true}
                         duration={500}>
-                            <button className="btn btn-design">Projetos</button>
+                            <button className="btn btn-design">{language == "pt" ? languageTexts.pt.menu.projects : languageTexts.en.menu.projects}</button>
                         </Link>
                     </div>
                     
@@ -55,7 +56,7 @@ function Navbar(){
                         to="conhecimentos"
                         smooth={true}
                         duration={500}>
-                            <button className=" btn btn-design">Conhecimentos</button>
+                            <button className=" btn btn-design">{language == "pt" ? languageTexts.pt.menu.instruction : languageTexts.en.menu.instruction}</button>
                         </Link>
                     </div>
                     <div className='margin-rigth'>
@@ -63,16 +64,11 @@ function Navbar(){
                         to="certificados"
                         smooth={true}
                         duration={500}>
-                            <button className=" btn btn-design">Certificados</button>
+                            <button className=" btn btn-design">{language == "pt" ? languageTexts.pt.menu.certificates : languageTexts.en.menu.certificates}</button>
                         </Link>
                     </div>
-                    <div className='margin-rigth'>
-                        <Link 
-                        to="conhecimentos"
-                        smooth={true}
-                        duration={500}>
-                            <button className=" btn btn-design">Idioma: {idioma}</button>
-                        </Link>
+                    <div >   
+                        <button onClick={toggleLanguage} >{language == 'pt' ? <img src="public\brasilIcon.png" alt="" className='icon'/> : <img src="public\iconEUA.png" alt="" className='icon' /> } </button>
                     </div>
                 </div>
             </nav>
