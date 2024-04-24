@@ -68,7 +68,7 @@ function Navbar(){
                         </Link>
                     </div>
                     <div >   
-                        <button onClick={toggleLanguage} >{language == 'pt' ? <img src="public\brasilIcon.png" alt="" className='icon'/> : <img src="public\iconEUA.png" alt="" className='icon' /> } </button>
+                        <button onClick={toggleLanguage} >{language == 'pt' ? <img src="brasilIcon.png" alt="" className='icon'/> : <img src="iconEUA.png" alt="" className='icon' /> } </button>
                     </div>
                 </div>
             </nav>
