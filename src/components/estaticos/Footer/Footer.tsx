@@ -1,14 +1,16 @@
 import { useContext, useState } from 'react';
 import styles from './Footer.module.css'
 import { ThemeContext } from '../ThemeToogle/Theme';
+import { LanguageContext, languageTexts } from '../../Idioma/idioma';
 
 
 export function Footer(){
+    const {language} = useContext(LanguageContext);
     const { isDarkMode } = useContext(ThemeContext);
 
     const [displayText, setDisplayText] = useState("copy.png");
 
-    const stringParaCopiar = "davidbalzarinipereira@id.uff.br"
+    const stringParaCopiar = "davidbalzarinipereira@gmail.com"
 
     const copiarString = () => {
     navigator.clipboard.writeText(stringParaCopiar)
@@ -31,7 +33,7 @@ export function Footer(){
                             <p>|</p>
                         </div>
                         <div >
-                            <p>&copy; 2023 David Balzarini. Todos os direitos reservados.</p>
+                            <p>&copy; {language == "en" ? languageTexts.en.footer : languageTexts.pt.footer}</p>
                         </div>
                     </div>
                 </footer>

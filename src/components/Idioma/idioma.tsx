@@ -25,7 +25,7 @@ export const languageTexts = {
         role: 'Fullstack Developer',
         programacao: "Javascript, Typescript, React.Js, Node.js, React Native, MySQL and Nest.js",
         curriculo: "Resume",
-        resume: "My name is David, I'm 19 years old and I'm a fullstack developer trained in the Genaration Brasil, I master several technologies, such as ",
+        resume: "My name is David, I'm 21 years old and I'm a fullstack developer trained in the Genaration Brasil, I master several technologies, such as ",
     },
     projects:{
         titulo: "Featured Projects",
@@ -42,6 +42,20 @@ export const languageTexts = {
             resumo: "In the ignite project I learned how to use Vitejs better, which is faster and more flexible than Create-React-App, I also learned how to use css modules and understood iteration better, the application is a kind of feed with comments."
         },
     },
+    conhecimentos:{
+      titulo: "Instruction",
+      none: '*hover over a skill.*',
+      js: "JavaScript is a widely used high-level programming language for creating interactivity and dynamism on web pages. It runs in users' browsers and enables the creation of both front-end and back-end applications.",
+      ts: "TypeScript is a programming language that adds static typing features to JavaScript. It provides a safer and more productive development environment by enabling the detection of code errors at compile time. TypeScript is compiled to JavaScript and is widely used in complex projects.",
+      node: "Node is a JavaScript runtime environment that allows the execution of JavaScript code on the server side. It is built with Google Chrome's V8 engine and provides a scalable and efficient development environment for creating web applications and APIs.",
+      react: "React is a popular JavaScript library for creating user interfaces (UI). React.js enables the construction of reusable components and provides a declarative approach to creating interactive and responsive interfaces. It is widely used for building single-page web applications (SPAs).",
+      nest: "Nest is a framework for Node.js that provides a modular and scalable structure for building robust backend applications. It utilizes dependency injection architecture and the object-oriented design pattern to facilitate the development and maintenance of applications.",
+      html:"HTML is the standard markup language for creating web pages. It defines the structure and content of the page, allowing the markup of elements such as headings, paragraphs, images, links, and more. HTML is interpreted by browsers to render web content.",
+      css: "CSS is a style language used to define the appearance and layout of elements on a web page. It allows the definition of styles such as colors, fonts, sizes, positioning, and animations, making it possible to customize the appearance of HTML elements.",
+      rn: "React Native is a framework for developing cross-platform mobile applications using JavaScript and React. It allows you to create native applications for iOS and Android with a single codebase, leveraging the reusable components of React.js."
+    },
+    certificates: "Certificates",
+    footer: "2023 David Balzarini. All rights reserved."
     
     
     
@@ -60,7 +74,7 @@ export const languageTexts = {
         role: 'Desenvolvedor FullStack',
         programacao: "Javascript, Typescript, React.Js, Node.js, React Native, MySQL e Nest.js",
         curriculo: "Currículo",
-        resume: "Me chamo David, tenho 19 anos e sou um desenvolvedor fullstack formado pela Generation Brasil, domino diversas tecnologias, como por exemplo ",
+        resume: "Me chamo David, tenho 21 anos e sou um desenvolvedor fullstack formado pela Generation Brasil, domino diversas tecnologias, como por exemplo ",
     },
     projects:{
         titulo: "Projetos em destaque",
@@ -76,15 +90,25 @@ export const languageTexts = {
             title: "Projeto Ignite",
             resumo: "no projeto ignite aprendi a utilizar melhor Vitejs que é mais rapido mais flexivel que o Create-React-App, tambem aprendi a usar css modules e entendi melhor a iteração, a aplicação é uma espécie de feed com comentários"
         },
-    }, 
+    },
+    conhecimentos:{
+      titulo: "Conhecimentos",
+      none: '*passe o mouse por cima de alguma habilidade*',
+      js: 'JavaScript é uma linguagem de programação de alto nível amplamente utilizada para criar interatividade e dinamismo em páginas web. É executada nos navegadores dos usuários e permite a criação de aplicações front-end e back-end.',
+      ts: "O typeScript é uma linguagem de programação que adiciona recursos de tipagem estática ao JavaScript. Ela oferece um desenvolvimento mais seguro e produtivo, permitindo a detecção de erros de código em tempo de compilação. O TypeScript é compilado para JavaScript e é amplamente usado em projetos complexos.",
+      node: "Node é um ambiente de tempo de execução JavaScript que permite a execução de código JavaScript no lado do servidor. Ele é construído com o mecanismo V8 do Google Chrome e fornece um ambiente de desenvolvimento escalável e eficiente para a criação de aplicativos web e APIs.",
+      react: "React é uma biblioteca JavaScript popular para a criação de interfaces de usuário (UI). O React.js permite a construção de componentes reutilizáveis e oferece uma abordagem declarativa para a criação de interfaces interativas e responsivas. É amplamente utilizado para criar aplicativos web de página única (Single-Page Applications).",
+      nest: "Nest é um framework para Node.js que fornece uma estrutura modular e escalável para a construção de aplicativos back-end robustos. Ele utiliza a arquitetura de injeção de dependência e o padrão de design orientado a objetos para facilitar o desenvolvimento e a manutenção de aplicativos.",
+      html:"HTML é a linguagem de marcação padrão para a criação de páginas web. Ela define a estrutura e o conteúdo da página, permitindo a marcação de elementos como títulos, parágrafos, imagens, links e muito mais. O HTML é interpretado pelos navegadores para renderizar o conteúdo web.",
+      css: "CSS é uma linguagem de estilo utilizada para definir a aparência e o layout dos elementos em uma página web. Ela permite a definição de estilos como cores, fontes, tamanhos, posicionamento e animações, tornando possível personalizar a aparência dos elementos HTML.",
+      rn: "React Native é um framework para o desenvolvimento de aplicativos móveis multiplataforma usando JavaScript e React. Ele permite criar aplicativos nativos para iOS e Android com uma única base de código, aproveitando os componentes reutilizáveis do React.js."
+    },
+    certificates: "Certificados",
+    footer: "2023 David Balzarini. Todos os direitos reservados." 
   },
 };
 
-// const updateTexts = (selectedLanguage: string) => {
-//   // Atualizar todos os textos na aplicação de acordo com o idioma selecionado
-//   document.getElementById('role').innerText = languageTexts[selectedLanguage].role;
-//   document.getElementById('button').innerText = languageTexts[selectedLanguage].buttonText;
-// };
+
 
 export const LanguageContext = createContext<LanguageContextType>({
   language: 'en',
@@ -92,7 +116,7 @@ export const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState('pt');
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     // Aqui você pode implementar a lógica para mudar o idioma em toda a aplicação, como alterar os textos exibidos

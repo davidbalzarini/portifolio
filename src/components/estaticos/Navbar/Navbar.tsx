@@ -51,7 +51,7 @@ function Navbar(){
                         </Link>
                     </div>
                     
-                    <div className='margin-rigth'>
+                    <div>
                         <Link 
                         to="conhecimentos"
                         smooth={true}
@@ -59,7 +59,7 @@ function Navbar(){
                             <button className=" btn btn-design">{language == "pt" ? languageTexts.pt.menu.instruction : languageTexts.en.menu.instruction}</button>
                         </Link>
                     </div>
-                    <div className='margin-rigth'>
+                    <div>
                         <Link 
                         to="certificados"
                         smooth={true}
