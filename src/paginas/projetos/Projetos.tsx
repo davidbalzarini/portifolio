@@ -52,6 +52,16 @@ function Projetos(){
         {
             id: 3,
             project:{
+                imgUrl: "growthhub.png",
+                name: languageTexts.pt.projects.project4.title,
+                descreption: languageTexts.pt.projects.project4.resumo,
+                url:"https://growthub.netlify.app/",
+                code:"https://github.com/davidbalzarini/GrowthHub"
+            }
+        },
+        {
+            id: 4,
+            project:{
                 imgUrl: "ignite.png",
                 name: "Projeto Ignite",
                 descreption: "no projeto ignite aprendi a utilizar melhor Vitejs que é mais rapido mais flexivel que o Create-React-App, tambem aprendi a usar css modules e entendi melhor a iteração, a aplicação é uma espécie de feed com comentários",
@@ -59,6 +69,7 @@ function Projetos(){
                 code:"https://github.com/davidbalzarini/ignite"
             }
         },
+        
     ] : projetos = [
         {
             id: 1,
@@ -83,6 +94,16 @@ function Projetos(){
         {
             id: 3,
             project:{
+                imgUrl: "growthhub.png",
+                name: languageTexts.en.projects.project4.title,
+                descreption: languageTexts.en.projects.project4.resumo,
+                url:"https://growthub.netlify.app/",
+                code:"https://github.com/davidbalzarini/GrowthHub"
+            }
+        },
+        {
+            id: 4,
+            project:{
                 imgUrl: "ignite.png",
                 name: languageTexts.en.projects.project3.title,
                 descreption: languageTexts.en.projects.project3.resumo,
@@ -90,6 +111,7 @@ function Projetos(){
                 code:"https://github.com/davidbalzarini/ignite"
             }
         },
+        
     ]
 
 

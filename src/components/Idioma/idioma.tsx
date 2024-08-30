@@ -41,6 +41,10 @@ export const languageTexts = {
             title: "Ignite Project",
             resumo: "In the ignite project I learned how to use Vitejs better, which is faster and more flexible than Create-React-App, I also learned how to use css modules and understood iteration better, the application is a kind of feed with comments."
         },
+        project4:{
+          title: "Growth-hub",
+          resumo: "The GrowthHub platform is designed for education and professional development, allowing users to access courses organized into modules. Users can take quizzes to test their knowledge, and certificates are issued only after completing all modules and achieving a minimum quiz score. Administrators can manage course materials, while managers can monitor their subordinates' performance. The platform uses modern technologies like Vite with React and TypeScript to ensure robust, efficient, and personalized experiences."
+        }
     },
     conhecimentos:{
       titulo: "Instruction",
@@ -90,6 +94,10 @@ export const languageTexts = {
             title: "Projeto Ignite",
             resumo: "no projeto ignite aprendi a utilizar melhor Vitejs que é mais rapido mais flexivel que o Create-React-App, tambem aprendi a usar css modules e entendi melhor a iteração, a aplicação é uma espécie de feed com comentários"
         },
+        project4:{
+          title: "Growth-hub",
+          resumo: "A plataforma GrowthHub é projetada para educação e desenvolvimento profissional, permitindo que os usuários acessem cursos organizados em módulos. Os usuários podem realizar quizzes para testar seus conhecimentos, e os certificados são emitidos apenas após a conclusão de todos os módulos e a obtenção de uma pontuação mínima nos quizzes. Os administradores podem gerenciar materiais do curso, enquanto os gestores podem monitorar o desempenho de seus subordinados. A plataforma utiliza tecnologias modernas como Vite com React e TypeScript para garantir experiências robustas, eficientes e personalizadas."
+        }
     },
     conhecimentos:{
       titulo: "Conhecimentos",
@@ -119,12 +127,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [language, setLanguage] = useState('en');
 
   useEffect(() => {
-    // Aqui você pode implementar a lógica para mudar o idioma em toda a aplicação, como alterar os textos exibidos
-    // por exemplo, poderia ser feito através de um serviço de tradução ou arquivos de idioma
+    
   }, [language]);
 
   const toggleLanguage = () => {
-    setLanguage(prevLanguage => (prevLanguage === 'pt' ? 'en' : 'pt')); // Alternar entre inglês e espanhol
+    setLanguage(prevLanguage => (prevLanguage === 'pt' ? 'en' : 'pt'));
   };
 
   const languageContextValue: LanguageContextType = {
