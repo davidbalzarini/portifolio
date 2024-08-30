@@ -11,7 +11,10 @@ function CardCertificado(){
         {id: 1, image: "certificadogeneration.png"},
         {id: 2, image: "versionamentodecodigo.png"},
         {id: 3, image: "contribuiçãoprojeto.png"},
-        {id: 4, image: "python.png"},
+        {id: 4, image: "angular-Radix.png"},
+        {id: 5, image: "react-Radix.png"},
+        {id: 6, image: "devOps-Radix.png"},
+        {id: 7, image: "python.png"},
     ]
 
 
@@ -21,7 +24,7 @@ function CardCertificado(){
         navigation
         >
             {data.map((item) => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={item.id} >
                     <img
                     src={item.image}
                     className='slideItem'

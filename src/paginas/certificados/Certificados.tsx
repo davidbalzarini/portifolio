@@ -15,7 +15,7 @@ export function Certificados(){
             <div id='certificados'>
                 <h1>{language == "en" ? languageTexts.en.certificates : languageTexts.pt.certificates}<span className='ponto'>:</span></h1>
             </div>
-            <div>
+            <div style={{margin: 20}}>
                 <CardCertificado/>
             </div>
         </div>
