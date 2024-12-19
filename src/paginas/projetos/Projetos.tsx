@@ -93,7 +93,7 @@ function Projetos(){
                 descreption: languageTexts.en.projects.project2.resumo,
                 view: false,
                 url:"https://blogpessoal-front-kappa.vercel.app/",
-                code:"https://github.com/davidbalzarinipereira/Blogpessoal-front.git"
+                code:"https://github.com/GioLimat/MAXLIMP/tree/main"
             }
         },
         {
