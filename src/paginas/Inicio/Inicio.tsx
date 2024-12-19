@@ -41,7 +41,7 @@ function Inicio(){
                         </text>
                     </div>
                     <div className='top'>
-                        <a  href="https://docs.google.com/document/d/1Qiez3h3-afQys4Dn7ZLETKXnb7IBsb73dg4FKy43BAE/edit?usp=sharing" target='blank'><button className='buttoncurriculo'>{language == "pt" ? languageTexts.pt.Inicio.curriculo : languageTexts.en.inicio.curriculo}</button></a>
+                        <a  href="https://docs.google.com/document/d/1462PK6h7acPiMW7IZnwFWxrhilUzhJancaVPGXsHwf4/edit?usp=sharing" target='blank'><button className='buttoncurriculo'>{language == "pt" ? languageTexts.pt.Inicio.curriculo : languageTexts.en.inicio.curriculo}</button></a>
                         <a href="https://www.linkedin.com/in/david-balzarini-pereira-645481227/" target='blank'><button className='buttonlinkedin'>Linkedin</button></a>
                         <a href="https://github.com/davidbalzarini" target='blank'><button className='buttongit'>Github</button></a>
                     </div>
