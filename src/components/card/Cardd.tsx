@@ -20,7 +20,8 @@ interface Projeto {
     name: string,
     descreption: string,
     url:string,
-    code:string
+    code:string,
+    view: boolean
   }
 }
 
@@ -79,7 +80,13 @@ export function Cardd({project}: Projeto) {
       <CardActions disableSpacing>
       </CardActions>
       <div>
-          <a href={project.url} target='blank'><img className='br' src={eye} alt="" width="30" /></a>
+      <a 
+        href={project.view ? project.url : undefined} // Condiciona o href baseado em 'view'
+        target="blank" 
+        style={{ pointerEvents: project.view ? 'auto' : 'none' }} // Desabilita o link se 'view' for false
+    >
+        <img className='br' src={eye} alt="" width="30" />
+    </a>
           <a href={project.code} target='blank'><img className='codfonte br' src={codfonte} alt="" width="30" /></a>
       </div> 
     </Card>

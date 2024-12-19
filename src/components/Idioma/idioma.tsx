@@ -34,8 +34,8 @@ export const languageTexts = {
             resumo: "This project uses ReactJS, Nest and MySQL technologies. The objective is to connect people in precarious situations who need healthcare materials, such as wheelchairs and crutches, with those who can donate these items. With ReactJS, we provide a user-friendly and responsive interface. The Nest framework allows us to create a scalable and modular backend. We use the MySQL database to securely store relevant information."
         },
         project2:{
-            title: "Personal Blog",
-            resumo: "“Personal blog” is a project I created to train my frontend and backend skills. For the frontend, I used Reactjs and for the backend, I used Nestjs. Also, I used SQL for the database. The website allows users to make posts, edit posts, delete posts, create users, log in and delete logins as well."
+            title: "Maxlimp",
+            resumo: "'Maxlimp' is a complete e-commerce platform for cleaning products that allows customers to start their orders through the application and complete them via WhatsApp. On the other hand, the Administrator can monitor the entire process of orders, sales, and average ticket values through a dashboard visible only to the Admin. Additionally, the Admin can update order statuses, as well as add, update, and remove orders. Technically, it is a full-stack project. On the backend, there is an API built with Django, featuring complete CRUD functionality and using JWT tokens for user authentication. The frontend is developed with React, chosen for its component-based approach. For styling, the TailwindCSS library was used, along with some components from the Material-UI library to enhance responsiveness."
         },
         project3:{
             title: "Ignite Project",
