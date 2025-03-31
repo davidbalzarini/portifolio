@@ -4,19 +4,8 @@ import './Projetos.css'
 import { CardComponent } from '../../components/card/CardComponent';
 import { useContext } from 'react';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
-import { LanguageContext, languageTexts } from '../../components/Idioma/idioma';
-
-
-
-
-    // {
-    //     id: 4,
-    //     project:{
-    //         imgUrl: "https://pbs.twimg.com/profile_images/1436750352129331206/5qGptDj-_400x400.jpg",
-    //         name: "David Balzarini",
-    //         descreption: "Web Developer"
-    //     }
-    // },
+import { LanguageContext } from '../../components/Idioma/idioma';
+import { languageTexts } from '../../components/Idioma/languageTexts';
     
   
 function Projetos(){
@@ -62,17 +51,6 @@ function Projetos(){
                 code:"https://github.com/davidbalzarini/GrowthHub"
             }
         },
-        // {
-        //     id: 4,
-        //     project:{
-        //         imgUrl: "ignite.png",
-        //         name: "Projeto Ignite",
-        //         descreption: "no projeto ignite aprendi a utilizar melhor Vitejs que é mais rapido mais flexivel que o Create-React-App, tambem aprendi a usar css modules e entendi melhor a iteração, a aplicação é uma espécie de feed com comentários",
-        //         url:"https://main--meek-macaron-b8ba13.netlify.app/",
-        //         code:"https://github.com/davidbalzarini/ignite"
-        //     }
-        // },
-        
     ] : projetos = [
         {
             id: 1,
@@ -107,17 +85,6 @@ function Projetos(){
                 code:"https://github.com/davidbalzarini/GrowthHub"
             }
         },
-        // {
-        //     id: 4,
-        //     project:{
-        //         imgUrl: "ignite.png",
-        //         name: languageTexts.en.projects.project3.title,
-        //         descreption: languageTexts.en.projects.project3.resumo,
-        //         url:"https://main--meek-macaron-b8ba13.netlify.app/",
-        //         code:"https://github.com/davidbalzarini/ignite"
-        //     }
-        // },
-        
     ]
 
 
@@ -127,7 +94,7 @@ function Projetos(){
             <div id='projetos' className="aa">
                 <div>
                     <h1 className='hidden'><span className='ponto'>:</span></h1>
-                    <h1>{language == "pt" ? languageTexts.pt.projects.titulo : languageTexts.en.projects.titulo}<span className='ponto'>:</span></h1>
+                    <h1>{languageTexts[language].projects.titulo}<span className='ponto'>:</span></h1>
                 </div>
                 <div className='containergrid'>
                     {projetos.map(projeto => {

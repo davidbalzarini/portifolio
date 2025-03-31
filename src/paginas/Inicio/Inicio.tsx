@@ -1,13 +1,16 @@
 import { useContext } from 'react';
 import './Inicio.css'
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
-import { LanguageContext, languageTexts } from '../../components/Idioma/idioma';
+import { LanguageContext } from '../../components/Idioma/idioma';
+import { languageTexts } from '../../components/Idioma/languageTexts';
 
 
 function Inicio(){
 
     const { isDarkMode } = useContext(ThemeContext);
-    const {language} = useContext(LanguageContext)
+    const {language} = useContext(LanguageContext);
+
+
     
     
     return(
@@ -26,24 +29,30 @@ function Inicio(){
                 <div>
                     <div className='.cargo'>
                         <p className='h1'>
-                                {language == "pt" ? languageTexts.pt.Inicio.role : languageTexts.en.inicio.role}<span className='ponto'>.</span>
+                                {languageTexts[language].inicio.role}<span className='ponto'>.</span>
                         </p>
                     </div>
                     <div className='divtexto'>
                         
                         <text className='resumo'>
-                            {language == "pt" ? languageTexts.pt.Inicio.resume  : languageTexts.en.inicio.resume}
+                        {languageTexts[language].inicio.resume}
                             {/* Me chamo David, tenho 19 anos e sou um desenvolvedor fullstack
                             formado pela generation brasil, domino diversas tecnologias, como por
                             exemplo <span >Javascript, Typescript, React.Js, Node.js, React Native, MySQL e 
                              Nest.js<span className='ponto'>.</span></span> */}
-                            <span className='bold'>{language == "pt" ? languageTexts.pt.Inicio.programacao : languageTexts.en.inicio.programacao}</span>
+                            <span className='bold'>{languageTexts[language].inicio.programacao}</span>
                         </text>
                     </div>
                     <div className='top'>
-                        <a  href="https://docs.google.com/document/d/1462PK6h7acPiMW7IZnwFWxrhilUzhJancaVPGXsHwf4/edit?usp=sharing" target='blank'><button className='buttoncurriculo'>{language == "pt" ? languageTexts.pt.Inicio.curriculo : languageTexts.en.inicio.curriculo}</button></a>
-                        <a href="https://www.linkedin.com/in/david-balzarini-pereira-645481227/" target='blank'><button className='buttonlinkedin'>Linkedin</button></a>
-                        <a href="https://github.com/davidbalzarini" target='blank'><button className='buttongit'>Github</button></a>
+                        <a  href="https://docs.google.com/document/d/1Ujb6eK_JroqDCjd7XBvCMoHQdkbzAbdTuo1CysVkNnY/edit?usp=sharing" target='blank'>
+                            <button className='buttoncurriculo'>{languageTexts[language].inicio.curriculo}</button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/david-balzarini-pereira-645481227/" target='blank'>
+                            <button className='buttonlinkedin'>Linkedin</button>
+                        </a>
+                        <a href="https://github.com/davidbalzarini" target='blank'>
+                            <button className='buttongit'>Github</button>
+                        </a>
                     </div>
                 </div>
             </div>

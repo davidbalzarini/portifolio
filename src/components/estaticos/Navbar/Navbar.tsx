@@ -3,7 +3,8 @@ import './Navbar.css'
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeToogle/Theme';
 import { Swicht } from '../Swicht/Swicht';
-import { LanguageContext, languageTexts } from '../../Idioma/idioma';
+import { LanguageContext } from '../../Idioma/idioma';
+import { languageTexts } from '../../Idioma/languageTexts';
 
 function Navbar(){
 
@@ -18,13 +19,6 @@ function Navbar(){
 
                 
                 <div className="center menu-section on">
-                    {/* <Link to='/navmob'>
-                        <div className="menu-toggle">
-                            <div className="one"></div>
-                            <div className="two"></div>
-                            <div className="three"></div>
-                        </div>
-                    </Link> */}
                     <div >
                         {<Swicht />}
                     </div>

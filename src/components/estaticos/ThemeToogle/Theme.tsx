@@ -11,7 +11,7 @@ type ThemeProviderProps = {
 
 export const ThemeContext = createContext<ThemeContextType>({
   isDarkMode: true,
-  toggleTheme: () => {},
+  toggleTheme: () => {console.log('Tema alterado')},
 });
 
 

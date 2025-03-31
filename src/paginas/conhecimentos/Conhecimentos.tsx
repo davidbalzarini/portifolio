@@ -1,4 +1,5 @@
-import { LanguageContext, languageTexts } from '../../components/Idioma/idioma';
+import { LanguageContext } from '../../components/Idioma/idioma';
+import { languageTexts } from '../../components/Idioma/languageTexts';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import './Conhecimentos.css'
 import { useState, useContext } from 'react';
@@ -14,35 +15,35 @@ export function Conhecimentos(){
     
 
     const handleMouseOverJs = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.js : languageTexts.pt.conhecimentos.js);
+        setDisplayText(languageTexts[language].conhecimentos.js);
     };
 
     const handleMouseOverTs = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.ts : languageTexts.pt.conhecimentos.ts)
+        setDisplayText(languageTexts[language].conhecimentos.ts)
     }
 
     const handleMouseOverNode = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.node : languageTexts.pt.conhecimentos.node)
+        setDisplayText(languageTexts[language].conhecimentos.node)
     }
 
     const handleMouseOverReact = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.react : languageTexts.pt.conhecimentos.react)
+        setDisplayText(languageTexts[language].conhecimentos.react)
     }
 
     const handleMouseOverNest = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.nest : languageTexts.pt.conhecimentos.nest)
+        setDisplayText(languageTexts[language].conhecimentos.nest)
     }
 
     const handleMouseOverHTML = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.html : languageTexts.pt.conhecimentos.html)
+        setDisplayText(languageTexts[language].conhecimentos.html)
     }
 
     const handleMouseOverCSS = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.css : languageTexts.pt.conhecimentos.css)
+        setDisplayText(languageTexts[language].conhecimentos.css)
     }
 
     const handleMouseOverReactNative = () => {
-        setDisplayText(language == "en" ? languageTexts.en.conhecimentos.rn : languageTexts.pt.conhecimentos.rn)
+        setDisplayText(languageTexts[language].conhecimentos.rn)
     }
 
     const handleMouseOut = () => {
@@ -61,7 +62,7 @@ export function Conhecimentos(){
             </div>
             <div className='containerc'>
                 <div className='texttop'>
-                    <p className='tamcert'>{displayText == '' ? (language == "en" ? languageTexts.en.conhecimentos.none : languageTexts.pt.conhecimentos.none) : displayText}</p>
+                    <p className='tamcert'>{displayText == '' ? (languageTexts[language].conhecimentos.none) : displayText}</p>
                 </div>
                 <div className='gridhab'>
                     <div onMouseOver={handleMouseOverJs} onMouseOut={handleMouseOut}><img width="100" height="100" src="js.png" alt="javascript--v1"/></div>

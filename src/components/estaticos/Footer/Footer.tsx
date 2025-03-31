@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
 import styles from './Footer.module.css'
 import { ThemeContext } from '../ThemeToogle/Theme';
-import { LanguageContext, languageTexts } from '../../Idioma/idioma';
+import { LanguageContext } from '../../Idioma/idioma';
+import { languageTexts } from '../../Idioma/languageTexts';
 
 
 export function Footer(){
@@ -12,11 +13,18 @@ export function Footer(){
 
     const stringParaCopiar = "davidbalzarinipereira@gmail.com"
 
-    const copiarString = () => {
-    navigator.clipboard.writeText(stringParaCopiar)
-    setDisplayText("check.png")
-
-}
+    const copiarString = async() => {
+        try{
+            await navigator.clipboard.writeText(stringParaCopiar)
+            setDisplayText("check.png")
+        }
+        catch(err){
+            console.error('Erro ao copiar o texto', err)
+        }
+        return setTimeout(() => {
+            setDisplayText("copy.png")
+        }, 2000)
+    }
 
     
     return(
@@ -26,7 +34,7 @@ export function Footer(){
                     <div className={styles.containerdiv}>
                     
                         <p className={styles.margin2}>{stringParaCopiar}</p>
-                        <button onClick={copiarString} >
+                        <button onClick={() => void copiarString()}>
                             <img src={displayText} alt="botão de copiar o email" width={20} />
                         </button>
                         <div className={styles.margin}>

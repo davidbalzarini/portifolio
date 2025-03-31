@@ -42,7 +42,7 @@ export function CardComponent({project}: Projeto) {
       else{
         return setCodfonte("codigofonte2.png")
       }
-    })
+    }, [isDarkMode])
   
     const [eye, setEye] = useState("olho.png");
   
@@ -54,7 +54,7 @@ export function CardComponent({project}: Projeto) {
       else{
         return setEye("olho2.png")
       }
-    })
+    }, [isDarkMode])
 
     
   
