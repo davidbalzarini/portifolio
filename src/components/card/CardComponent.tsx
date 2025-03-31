@@ -4,7 +4,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import './Cardd.css'
+import './CardComponent.css'
 import Typography from '@mui/material/Typography';
 import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../estaticos/ThemeToogle/Theme';
@@ -28,7 +28,7 @@ interface Projeto {
 
 
 
-export function Cardd({project}: Projeto) {
+export function CardComponent({project}: Projeto) {
 
   const { isDarkMode } = useContext(ThemeContext);
 

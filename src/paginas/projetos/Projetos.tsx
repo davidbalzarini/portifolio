@@ -1,7 +1,7 @@
 
 
 import './Projetos.css'
-import { Cardd } from '../../components/card/Cardd';
+import { CardComponent } from '../../components/card/CardComponent';
 import { useContext } from 'react';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { LanguageContext, languageTexts } from '../../components/Idioma/idioma';
@@ -132,7 +132,7 @@ function Projetos(){
                 <div className='containergrid'>
                     {projetos.map(projeto => {
                         return(
-                            <Cardd
+                            <CardComponent
                             project={projeto.project}
                             />
                         )
