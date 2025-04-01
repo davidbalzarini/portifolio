@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { Grid, Typography, Box, Button } from '@mui/material';
+import { useContext } from 'react';
+import { Grid, Typography, Box } from '@mui/material';
 import { LanguageContext } from '../../components/Idioma/idioma';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { languageTexts } from '../../components/Idioma/languageTexts';
