@@ -1,5 +1,5 @@
 .container{
-    width: 100vw;
+    width: 110vw;
 }
 
 .none{
@@ -12,7 +12,7 @@
     background: var(--background);
     display: flex;
     position: absolute;
-    width: 100%;
+    width: 110%;
     align-items: center;
     justify-content: center;
 }

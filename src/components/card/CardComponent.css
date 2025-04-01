@@ -55,7 +55,7 @@
 @media(max-width: 430px){
 
     .card{
-        width: 300px;
+        width: 80vw !important;
     }
    
     .fotocard{
@@ -68,10 +68,4 @@
     }
 
 
-}
-
-@media(max-width: 375px){
-    .card{
-        width: 100px !important;
-    }
 }

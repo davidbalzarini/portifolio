@@ -61,7 +61,7 @@ export function CardComponent({project}: Projeto) {
   
 
   return (
-    <Card sx={{ minWidth: 360, minHeight:500 }} className='card'>
+    <Card sx={{ minWidth: '100px', minHeight:500}} className='card'>
       <CardHeader
         title={project.name}
         subheader=""
