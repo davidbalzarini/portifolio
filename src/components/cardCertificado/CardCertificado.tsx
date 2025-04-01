@@ -38,10 +38,10 @@ const CardCertificado = () => {
             alt=''
             className="slideItem"
             style={{
-              width: '80vw', 
+              width: '100%', 
               height: 'auto', 
               borderRadius: '10px', 
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', 
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
             }}
           />
         </SwiperSlide>
