@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { LanguageContext } from '../../components/Idioma/idioma';
 import { languageTexts } from '../../components/Idioma/languageTexts';
+import { Grid, Typography } from '@mui/material';
     
   
 function Projetos(){
@@ -91,25 +92,33 @@ function Projetos(){
 
     return (
         <div className={isDarkMode ? 'escuro' : 'claro'}>
-            <div id='projetos' className="aa">
-                <div>
-                    <h1 className='hidden'><span className='ponto'>:</span></h1>
-                    <h1>{languageTexts[language].projects.titulo}<span className='ponto'>:</span></h1>
-                </div>
-                <div className='containergrid'>
-                    {projetos.map(projeto => {
-                        return(
-                            <CardComponent
-                            project={projeto.project}
-                            />
-                        )
-                    })}
-                    
-                    
-                </div>
-                
-            </div>
+         <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold', marginY: 5, textAlign: 'center' }}>
+            {languageTexts[language].projects.titulo}<span className='ponto'>:</span>
+          </Typography>
+        <Grid 
+        container 
+        spacing={{ xs: 2, sm: 5, md: 5, lg: 12 }} 
+        sx={{
+            padding: 0,
+            justifyContent: {md:'center', small:'center', xs:'center'}, 
+            alignItems: 'center', 
+            minHeight: '100vh', 
+            marginY: 5,
+          }}
+        >
+            
+          {projetos.map((projeto) => (
+            <Grid item xs={12} sm={12} md={12} lg={4} key={projeto.id}
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <CardComponent project={projeto.project} />   
+            </Grid>
+          ))}
+        </Grid>
         </div>
-    )
+      );
 }
 export default Projetos;

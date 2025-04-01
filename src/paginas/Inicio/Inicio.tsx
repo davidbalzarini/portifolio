@@ -1,49 +1,61 @@
-import { useContext } from 'react';
-import './Inicio.css'
-import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
+import React, { useContext } from 'react';
+import { Grid, Typography, Box, Button } from '@mui/material';
 import { LanguageContext } from '../../components/Idioma/idioma';
+import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { languageTexts } from '../../components/Idioma/languageTexts';
+import './Inicio.css'
 
+export default function Inicio() {
+  const { isDarkMode } = useContext(ThemeContext);
+  const { language } = useContext(LanguageContext);
 
-function Inicio(){
+  return (
+    <Box
+    className={isDarkMode ? 'escuro' : 'claro'}
+      sx={{
+        padding: 4,
+        minHeight: '20vh',
+        marginTop: {md:10, sm:10, xs:20},
+        marginBottom: {lg:5, md:10, sm:5, xs:3},
+        justifyContent: 'center',
+      }}
+    >
+      <Grid
+        container
+        spacing={4}
+        alignItems="center"
+        justifyContent="center"
+        sx={{
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
+        {/* Imagem do lado esquerdo */}
+        <Grid item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Box
+            component="img"
+            src="fotodavid.jpeg"
+            alt="Foto de David"
+            sx={{
+              width: { xs: '150px', sm: '200px', md: '300px' },
+              borderRadius: '50%',
+              border: '5px solid',
+              borderColor: 'var(--green)',
+            }}
+          />
+        </Grid>
 
-    const { isDarkMode } = useContext(ThemeContext);
-    const {language} = useContext(LanguageContext);
+        {/* Texto do lado direito */}
+        <Grid item xs={12} md={6}>
+          <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold' }}>
+            {languageTexts[language].inicio.role}
+            <span style={{ color: '#4caf50' }}>.</span>
+          </Typography>
+          <Typography variant="body1" sx={{ marginTop: 2, fontSize: { xs: '1em', md: '1.2em' } }}>
+            {languageTexts[language].inicio.resume} {languageTexts[language].inicio.programacao}
+          </Typography>
 
-
-    
-    
-    return(
-        <div className={isDarkMode ? 'escuro' : 'claro'}>
-            <div id='inicio' className='inicio-margin inicio'>
-            <div>
-                <text  className='text-hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dolores perspiciatis reprehenderit, consequuntur aut aspernatur sint tenetur! Nemo ex, perspiciatis asperiores, atque nisi nesciunt rem provident, mollitia enim pariatur facere.</text>  
-            </div>
-            <div>
-                <text  className='text-hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dolores perspiciatis reprehenderit, consequuntur aut aspernatur sint tenetur! Nemo ex, perspiciatis asperiores, atque nisi nesciunt rem provident, mollitia enim pariatur facere.</text>  
-            </div>
-            <div className='container'>
-                <div className='divimg'>
-                    <img className="imagemperfil" src="fotodavid.jpeg" alt="" />
-                </div>
-                <div>
-                    <div className='.cargo'>
-                        <p className='h1'>
-                                {languageTexts[language].inicio.role}<span className='ponto'>.</span>
-                        </p>
-                    </div>
-                    <div className='divtexto'>
-                        
-                        <text className='resumo'>
-                        {languageTexts[language].inicio.resume}
-                            {/* Me chamo David, tenho 19 anos e sou um desenvolvedor fullstack
-                            formado pela generation brasil, domino diversas tecnologias, como por
-                            exemplo <span >Javascript, Typescript, React.Js, Node.js, React Native, MySQL e 
-                             Nest.js<span className='ponto'>.</span></span> */}
-                            <span className='bold'>{languageTexts[language].inicio.programacao}</span>
-                        </text>
-                    </div>
-                    <div className='top'>
+          {/* Botões */}
+          <div className='top'>
                         <a  href="https://docs.google.com/document/d/1Ujb6eK_JroqDCjd7XBvCMoHQdkbzAbdTuo1CysVkNnY/edit?usp=sharing" target='blank'>
                             <button className='buttoncurriculo'>{languageTexts[language].inicio.curriculo}</button>
                         </a>
@@ -54,10 +66,8 @@ function Inicio(){
                             <button className='buttongit'>Github</button>
                         </a>
                     </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    )
+        </Grid>
+      </Grid>
+    </Box>
+  );
 }
-export default Inicio;

@@ -3,8 +3,10 @@
     color: var(--fonte) !important;
     border: 5px solid var(--green);
     width: 400px;
+    height: 710px;
     border-radius: 100px !important;
     transition: 0.5s ease !important;
+    padding: 2em;
 }
 
 
@@ -24,6 +26,7 @@
 .text-card{
     background-color: var(--background);
     color: var(--fonte);
+    
 }
 
 .fotocard{
@@ -36,13 +39,25 @@
     border-radius: 0;
 }
 
-@media(max-width: 430px){
+@media(max-width: 1200px){
     .card{
-        height: 1000px;
-        width: 860px;
-        margin-bottom: 50px;
-        
+        height: fit-content 
     }
+
+    .text-card{
+        font-size: 1em !important;
+    }
+
+
+    
+}
+
+@media(max-width: 430px){
+
+    .card{
+        width: 300px;
+    }
+   
     .fotocard{
         height: 500px
     }
@@ -50,8 +65,13 @@
     .text-card{
         background-color: var(--background);
         color: var(--fonte);
-        font-size: 30px !important;
     }
 
 
+}
+
+@media(max-width: 375px){
+    .card{
+        width: 100px !important;
+    }
 }

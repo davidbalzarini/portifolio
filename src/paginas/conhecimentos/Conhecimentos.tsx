@@ -1,81 +1,183 @@
+import { useContext, useState } from 'react';
+import { Grid, Typography, Box } from '@mui/material';
 import { LanguageContext } from '../../components/Idioma/idioma';
-import { languageTexts } from '../../components/Idioma/languageTexts';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
-import './Conhecimentos.css'
-import { useState, useContext } from 'react';
+import { languageTexts } from '../../components/Idioma/languageTexts';
+
+export default function Conhecimentos() {
+  const { isDarkMode } = useContext(ThemeContext);
+  const { language } = useContext(LanguageContext);
+
+  const [displayText, setDisplayText] = useState('');
 
 
-export function Conhecimentos(){
+  const texts = languageTexts[language].conhecimentos;
 
-    const {language} = useContext(LanguageContext)
-    const [displayText, setDisplayText] = useState('');
-    const { isDarkMode } = useContext(ThemeContext);
+  const handleMouseOver = (text: string) => {
+    setDisplayText(text);
+  };
 
-    
-    
+  const handleMouseOut = () => {
+    setDisplayText('');
+  };
 
-    const handleMouseOverJs = () => {
-        setDisplayText(languageTexts[language].conhecimentos.js);
-    };
+  return (
+    <Box
+    className={isDarkMode ? 'escuro' : 'claro'}
+      sx={{
+        padding: 4,
+        minHeight: '15vh',
+      }}
+    >
+      <Typography
+        variant="h3"
+        sx={{
+          fontSize: { xs: '1.8em', md: '2.5em' },
+          fontWeight: 'bold',
+          marginBottom: 4,
+          textAlign: 'center',
+        }}
+      >
+        {texts.titulo}
+        <span style={{ color: '#4caf50' }}>:</span>
+      </Typography>
 
-    const handleMouseOverTs = () => {
-        setDisplayText(languageTexts[language].conhecimentos.ts)
-    }
-
-    const handleMouseOverNode = () => {
-        setDisplayText(languageTexts[language].conhecimentos.node)
-    }
-
-    const handleMouseOverReact = () => {
-        setDisplayText(languageTexts[language].conhecimentos.react)
-    }
-
-    const handleMouseOverNest = () => {
-        setDisplayText(languageTexts[language].conhecimentos.nest)
-    }
-
-    const handleMouseOverHTML = () => {
-        setDisplayText(languageTexts[language].conhecimentos.html)
-    }
-
-    const handleMouseOverCSS = () => {
-        setDisplayText(languageTexts[language].conhecimentos.css)
-    }
-
-    const handleMouseOverReactNative = () => {
-        setDisplayText(languageTexts[language].conhecimentos.rn)
-    }
-
-    const handleMouseOut = () => {
-        setDisplayText('');
-    };
-
-    
-
-    
-
-
-    return(
-        <div className={isDarkMode ? 'escuro' : 'claro'}>
-            <div id='conhecimentos'>
-                <h1>{language == "en" ? languageTexts.en.conhecimentos.titulo : languageTexts.pt.conhecimentos.titulo}<span className='ponto'>:</span></h1>
-            </div>
-            <div className='containerc'>
-                <div className='texttop'>
-                    <p className='tamcert'>{displayText == '' ? (languageTexts[language].conhecimentos.none) : displayText}</p>
-                </div>
-                <div className='gridhab'>
-                    <div onMouseOver={handleMouseOverJs} onMouseOut={handleMouseOut}><img width="100" height="100" src="js.png" alt="javascript--v1"/></div>
-                    <div className='mtop' onMouseOver={handleMouseOverTs} onMouseOut={handleMouseOut}><img width="120" height="120" src="ts.png" alt="typescript"/></div>
-                    <div onMouseOver={handleMouseOverNode} onMouseOut={handleMouseOut}><img width="100" height="100" src="node.png" alt="node-js"/></div>
-                    <div onMouseOver={handleMouseOverNest} onMouseOut={handleMouseOut}><img width="100" height="100" src="nest.png" alt="nestjs"/></div>
-                    <div onMouseOver={handleMouseOverHTML} onMouseOut={handleMouseOut}><img width="100" height="100" src="html.png" alt="react"/></div>
-                    <div onMouseOver={handleMouseOverCSS} onMouseOut={handleMouseOut}><img width="100" height="100" src="css.png" alt="react"/></div>
-                    <div onMouseOver={handleMouseOverReact} onMouseOut={handleMouseOut}><img width="100" height="100" src="react.png" alt="react"/></div>
-                    <div onMouseOver={handleMouseOverReactNative} onMouseOut={handleMouseOut}><img width="100" height="100" src="reactn.png" alt="react"/></div>
-                    
-                </div>
-            </div>
-        </div>
-    )
+      <Grid
+      container
+      spacing={2}
+      justifyContent="center"
+      alignItems="center"
+      >
+      <Grid item xs={12} sm={12} md={6} lg={6} >
+      {/* Título */}
+      
+      {/* Texto superior */}
+      <Typography
+        variant="body1"
+        sx={{
+          textAlign: 'center',
+          marginBottom: 4,
+          fontSize: { xs: '1em', md: '1.2em' },
+        }}
+      >
+        {displayText === '' ? texts.none : displayText}
+      </Typography>
+      </Grid>
+      {/* Grid de habilidades */}
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        item xs={12} sm={12} md={6} lg={6}
+      >
+        {/* Ícones de habilidades */}
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.js)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="js.png"
+            alt="JavaScript"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.ts)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="ts.png"
+            alt="TypeScript"
+            sx={{
+              width: '110px',
+              height: '110px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.node)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="node.png"
+            alt="Node.js"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.nest)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="nest.png"
+            alt="Nest.js"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.html)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="html.png"
+            alt="HTML"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.css)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="css.png"
+            alt="CSS"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.react)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="react.png"
+            alt="React"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+        <Grid item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.rn)} onMouseOut={handleMouseOut}>
+          <Box
+            component="img"
+            src="reactn.png"
+            alt="React Native"
+            sx={{
+              width: '100px',
+              height: '100px',
+              margin: '0 auto',
+              display: 'block',
+            }}
+          />
+        </Grid>
+      </Grid>
+      </Grid>
+    </Box>
+  );
 }

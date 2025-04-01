@@ -2,6 +2,14 @@
     visibility: hidden;
 }
 
+.h1 {
+  font-size: 2.5em; /* Ajuste para telas menores */
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+}
+
 .containergrid {
     margin-left: -150px;
     margin-top: 70px;

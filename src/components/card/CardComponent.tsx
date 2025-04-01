@@ -81,9 +81,9 @@ export function CardComponent({project}: Projeto) {
       </CardActions>
       <div>
       <a 
-        href={project.view ? project.url : undefined} // Condiciona o href baseado em 'view'
+        href={project.view ? project.url : undefined}
         target="blank" 
-        style={{ pointerEvents: project.view ? 'auto' : 'none' }} // Desabilita o link se 'view' for false
+        style={{ pointerEvents: project.view ? 'auto' : 'none' }}
     >
         <img className='br' src={eye} alt="" width="30" />
     </a>

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './Footer.module.css'
 import { ThemeContext } from '../ThemeToogle/Theme';
 import { LanguageContext } from '../../Idioma/idioma';
@@ -22,10 +22,19 @@ export function Footer(){
             console.error('Erro ao copiar o texto', err)
         }
         return setTimeout(() => {
-            setDisplayText("copy.png")
+            const copyIcon = isDarkMode ? "copy.png" : "copy2.png"
+            setDisplayText(copyIcon)
         }, 2000)
     }
 
+    useEffect(() => {
+        if(!isDarkMode){
+            setDisplayText("copy2.png")
+        }
+        else{
+            setDisplayText("copy.png")
+        }
+    }, [isDarkMode])
     
     return(
         <div className={isDarkMode ? 'escuro' : 'claro'}>
@@ -40,7 +49,7 @@ export function Footer(){
                         <div className={styles.margin}>
                             <p>|</p>
                         </div>
-                        <div >
+                        <div>
                             <p>&copy; {language == "en" ? languageTexts.en.footer : languageTexts.pt.footer}</p>
                         </div>
                     </div>

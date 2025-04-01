@@ -1,5 +1,9 @@
 .container{
-    width: 100%;
+    width: 100vw;
+}
+
+.none{
+    display: block;
 }
 
 .footer{
@@ -24,3 +28,14 @@
     margin-left: 20px;
 }
 
+@media (max-width: 768px) {
+    .margin {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .none{
+        display: none;
+    }
+}

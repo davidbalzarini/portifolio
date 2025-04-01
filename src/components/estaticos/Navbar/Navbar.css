@@ -44,6 +44,7 @@ html{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     
 }
 
@@ -92,16 +93,15 @@ html{
 
 
 
-@media (max-width:425px) {
+@media (max-width:766px) {
 
     .icon{
-        height: 100px;
-        width: 100px;
+     margin-left: -30px;
     }
 
-    .navbar{
+    /* .navbar{
         height: 140px;
-    }
+    } */
     
 
     .btn-design{
@@ -135,9 +135,6 @@ html{
         padding-top: 4px;
         padding-bottom: 4px;
     }
-   
-
-    /* fullscreen */
 
     
 }
