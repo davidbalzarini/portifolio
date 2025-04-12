@@ -9,11 +9,6 @@ import Typography from '@mui/material/Typography';
 import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../estaticos/ThemeToogle/Theme';
 
-
-
-
-
-
 interface Projeto {
   project:{
     imgUrl: string,
@@ -24,9 +19,6 @@ interface Projeto {
     view: boolean
   }
 }
-
-
-
 
 export function CardComponent({project}: Projeto) {
 
@@ -61,7 +53,8 @@ export function CardComponent({project}: Projeto) {
   
 
   return (
-    <Card sx={{ minWidth: '100px', minHeight:500}} className='card'>
+    <Card
+    className='card'>
       <CardHeader
         title={project.name}
         subheader=""
