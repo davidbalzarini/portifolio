@@ -29,7 +29,6 @@ export default function Inicio() {
           flexDirection: { xs: 'column', md: 'row' },
         }}
       >
-        {/* Imagem do lado esquerdo */}
         <Grid item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Box
             component="img"
@@ -43,8 +42,6 @@ export default function Inicio() {
             }}
           />
         </Grid>
-
-        {/* Texto do lado direito */}
         <Grid item xs={12} md={6}>
           <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold' }}>
             {languageTexts[language].inicio.role}
@@ -62,7 +59,7 @@ export default function Inicio() {
                         <a href="https://www.linkedin.com/in/david-balzarini-pereira-645481227/" target='blank'>
                             <button className='buttonlinkedin'>Linkedin</button>
                         </a>
-                        <a href="https://github.com/davidbalzarini" target='blank'>
+                        <a href="https://github.com/davidbalzarini/curriculo" target='blank'>
                             <button className='buttongit'>Github</button>
                         </a>
                     </div>
