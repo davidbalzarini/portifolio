@@ -7,7 +7,6 @@ import { LanguageContext } from '../../Idioma/idioma';
 import { languageTexts } from '../../Idioma/languageTexts';
 
 function Navbar(){
-
     const { isDarkMode } = useContext(ThemeContext);
     const {language, toggleLanguage} = useContext(LanguageContext)
 
