@@ -54,6 +54,7 @@ export function CardComponent({project}: Projeto) {
 
   return (
     <Card
+    sx={{ display: 'flex', flexDirection: 'column' }}
     className='card'>
       <CardHeader
         title={project.name}
@@ -70,6 +71,7 @@ export function CardComponent({project}: Projeto) {
           {project.descreption}
         </Typography>
       </CardContent>
+      <div style={{flex: 1}} />
       <CardActions disableSpacing>
       </CardActions>
       <div>
