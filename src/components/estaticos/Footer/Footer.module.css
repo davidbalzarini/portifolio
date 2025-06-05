@@ -1,41 +1,57 @@
-.container{
-    width: 110vw;
+.container {
+    width: 100%;
 }
 
-.none{
+.none {
     display: block;
 }
 
-.footer{
-    border-top:2px solid var(--green);
-    left: 0;
+.footer {
+    /* Remover position absolute e width 110% */
+    /* position: absolute; */
+    /* width: 110%; */
+
+    border-top: 2px solid var(--green);
+    left: 0; /* se quiser manter, use position: relative ou fixed */
+    
     background: var(--background);
     display: flex;
-    position: absolute;
-    width: 110%;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.containerdiv{
+.containerdiv {
     display: flex;
     align-items: center;
     padding-left: 10px;
 }
 
-.margin{
+.margin {
     margin-right: 40px !important;
     margin-left: 20px;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
     .margin {
         margin: 10px 0;
     }
 }
 
+@media (max-width: 440px){
+    .containerdiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .margin {
+        margin: 10px 0;
+    }
+}
+
 @media (max-width: 375px) {
-    .none{
+    .none {
         display: none;
     }
 }

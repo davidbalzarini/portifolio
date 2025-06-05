@@ -1,9 +1,10 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { LanguageContext } from '../../components/Idioma/idioma';
 import { languageTexts } from '../../components/Idioma/languageTexts';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import CardCertificado from '../../components/cardCertificado/CardCertificado';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
 export function Certificados() {
   const { language } = useContext(LanguageContext);
@@ -36,20 +37,13 @@ export function Certificados() {
       </Typography>
 
 
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{
-          width: '100%',
-          maxWidth: '1200px', 
-          padding: { xs: 2, md: 4 },
-        }}
-      >
-        <Grid item xs={12}>
-          <CardCertificado />
-        </Grid>
-      </Grid>
+      <Carousel className="max-w-screen-xl">
+        <CarouselContent>
+          <CarouselItem>
+            <CardCertificado />
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel>
     </Box>
   );
 }

@@ -2,11 +2,12 @@
     background-color: var(--background) !important;
     color: var(--fonte) !important;
     border: 5px solid var(--green);
-    width: 400px;
-    height: 850px;
+    /* width: 400px; */
     border-radius: 100px !important;
     transition: 0.5s ease !important;
     padding: 2em;
+    box-sizing: border-box;
+
 }
 
 
@@ -16,12 +17,12 @@
     margin-left: 50px!important;
 }
 
-.card:hover{
+/* .card:hover{
     border-radius: 0 !important;
     .fotocard{
         border-radius: 0;
     }
-}
+} */
 
 .text-card{
     background-color: var(--background);
@@ -35,14 +36,10 @@
     transition: 1 ease;
     height:250px !important;
 }
-.fotocard:hover{
-    border-radius: 0;
-}
+
 
 @media(max-width: 1200px){
-    .card{
-        height: fit-content 
-    }
+
 
     .text-card{
         font-size: 1em !important;
@@ -52,14 +49,32 @@
     
 }
 
+@media(max-width: 800px){
+    .card{
+        width: 100vw !important;
+    }
+
+    .fotocard{
+        height: 400px
+    }
+
+    .text-card{
+        background-color: var(--background);
+        color: var(--fonte);
+    }
+}
+
 @media(max-width: 430px){
 
     .card{
-        width: 80vw !important;
+        width: 95vw !important;
+        border-radius: 20px !important;
     }
    
     .fotocard{
-        height: 500px
+        height: 500px;
+        width: 100%;
+        border-radius: 20px !important;
     }
 
     .text-card{

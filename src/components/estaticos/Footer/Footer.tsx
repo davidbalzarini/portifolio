@@ -41,13 +41,14 @@ export function Footer(){
             <div className={styles.container} >
                 <footer className={styles.footer}>
                     <div className={styles.containerdiv}>
-                    
-                        <p className={styles.margin2}>{stringParaCopiar}</p>
-                        <button onClick={() => void copiarString()}>
-                            <img src={displayText} alt="botão de copiar o email" width={20} />
-                        </button>
+                        <div className='flex items-center'>
+                            <p className={styles.margin2}>{stringParaCopiar}</p>
+                            <button onClick={() => void copiarString()}>
+                                <img src={displayText} alt="botão de copiar o email" width={20} />
+                            </button>
+                        </div>
                         <div className={styles.margin}>
-                            <p>|</p>
+                            <p className='hidden  lg:block'>|</p>
                         </div>
                         <div>
                             <p>&copy; {language == "en" ? languageTexts.en.footer : languageTexts.pt.footer}</p>

@@ -1,10 +1,12 @@
-import { Link } from 'react-scroll';
+
 import './Navbar.css'
 import { useContext } from 'react';
 import { ThemeContext } from '../ThemeToogle/Theme';
 import { Swicht } from '../Swicht/Swicht';
 import { LanguageContext } from '../../Idioma/idioma';
 import { languageTexts } from '../../Idioma/languageTexts';
+import {Link} from 'react-scroll';
+
 
 function Navbar(){
     const { isDarkMode } = useContext(ThemeContext);
@@ -17,12 +19,13 @@ function Navbar(){
             <nav className="navbar end">
 
                 
-                <div className="center menu-section on">
+                <div className="center menu-section on flex">
                     <div >
                         {<Swicht />}
                     </div>
+                    <div className='mobile'/>
                     <div >
-                        <Link to="inicio"
+                        <Link to="#inicio"
                         smooth={true}
                         duration={500}>
                             <button className="btn-design">{language == "pt" ? languageTexts.pt.menu.inicio : languageTexts.en.menu.inicio}</button>
@@ -60,6 +63,7 @@ function Navbar(){
                             <button className=" btn btn-design">{language == "pt" ? languageTexts.pt.menu.certificates : languageTexts.en.menu.certificates}</button>
                         </Link>
                     </div>
+
                     <div >   
                         <button onClick={toggleLanguage} >{language == 'pt' ? <img src="brasilIcon.png" alt="" className='icon'/> : <img src="iconEUA.png" alt="" className='icon' /> } </button>
                     </div>

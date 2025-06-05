@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router';
 import './App.css'
 import Navbar from './components/estaticos/Navbar/Navbar';
 import Inicio from './paginas/Inicio/Inicio';

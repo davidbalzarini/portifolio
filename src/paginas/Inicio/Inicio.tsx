@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Grid, Typography, Box } from '@mui/material';
+import { Typography, Box, GridLegacy } from '@mui/material';
 import { LanguageContext } from '../../components/Idioma/idioma';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { languageTexts } from '../../components/Idioma/languageTexts';
@@ -15,12 +15,12 @@ export default function Inicio() {
       sx={{
         padding: 4,
         minHeight: '20vh',
-        marginTop: {md:10, sm:10, xs:20},
+        marginTop: {md:10, sm:10, xs:5},
         marginBottom: {lg:5, md:10, sm:5, xs:3},
         justifyContent: 'center',
       }}
     >
-      <Grid
+      <GridLegacy
         container
         spacing={4}
         alignItems="center"
@@ -29,7 +29,7 @@ export default function Inicio() {
           flexDirection: { xs: 'column', md: 'row' },
         }}
       >
-        <Grid item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <GridLegacy item xs={12} md={6} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <Box
             component="img"
             src="fotodavid.jpeg"
@@ -41,8 +41,8 @@ export default function Inicio() {
               borderColor: 'var(--green)',
             }}
           />
-        </Grid>
-        <Grid item xs={12} md={6}>
+        </GridLegacy>
+        <GridLegacy item xs={12} md={6}>
           <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold' }}>
             {languageTexts[language].inicio.role}
             <span style={{ color: '#4caf50' }}>.</span>
@@ -51,7 +51,6 @@ export default function Inicio() {
             {languageTexts[language].inicio.resume} {languageTexts[language].inicio.programacao}
           </Typography>
 
-          {/* Botões */}
           <div className='top'>
                         <a  href="https://docs.google.com/document/d/1Ujb6eK_JroqDCjd7XBvCMoHQdkbzAbdTuo1CysVkNnY/edit?usp=sharing" target='blank'>
                             <button className='buttoncurriculo'>{languageTexts[language].inicio.curriculo}</button>
@@ -63,8 +62,8 @@ export default function Inicio() {
                             <button className='buttongit'>Github</button>
                         </a>
                     </div>
-        </Grid>
-      </Grid>
+        </GridLegacy>
+      </GridLegacy>
     </Box>
   );
 }
