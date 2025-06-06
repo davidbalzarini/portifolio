@@ -20,33 +20,34 @@ function Projetos() {
           url: "",
           code: "",
           videoUrl: "/naesquinaVideo.mp4",
-          tags: ["ReactJS", "Shadcn", "Tailwindcss", "SpringBoot", "Postgree", "TypeScript", "Java", "Kotlin"]
+          tags: ["ReactJS", "Shadcn", "Tailwind css", "SpringBoot", "Postgree", "TypeScript", "Java", "Kotlin"]
         }
       },
       {
         id: 2,
         project: {
-          imgUrl: "probemimg.png",
-          name: languageTexts[language].projects.probem.title,
-          view: true,
-          descreption: languageTexts[language].projects.probem.resumo, //"This project uses ReactJS, Nest and MySQL technologies. The objective is to connect people in precarious situations who need healthcare materials, such as wheelchairs and crutches, with those who can donate these items. With ReactJS, we provide a user-friendly and responsive interface. The Nest framework allows us to create a scalable and modular backend. We use the MySQL database to securely store relevant information.",
-          url: "https://probemreact.vercel.app/",
-          code: "https://github.com/generationsaud/probemreact.git",
-          tags: ["ReactJS", "NestJs", "MySQL", "TypeScript", "Material UI"]
+          imgUrl: "maxlimp.png",
+          name: languageTexts[language].projects.maxlimp.title,
+          descreption: languageTexts[language].projects.maxlimp.resumo,
+          view: false,
+          url: "",
+          code: "https://github.com/davidbalzarini/maxlimp",
+          tags: ["React", "Tailwind css", "Django", "MySQL"]
         }
       },
       {
         id: 3,
         project: {
-          imgUrl: "maxlimp.png",
-          name: languageTexts[language].projects.maxlimp.title,
-          descreption: languageTexts[language].projects.maxlimp.resumo,
-          view: false,
-          url: "https://blogpessoal-front-kappa.vercel.app/",
-          code: "https://github.com/GioLimat/MAXLIMP/tree/main",
-          tags: ["React", "Tailwindcss", "Django", "MySQL"]
+          imgUrl: "probemimg.png",
+          name: languageTexts[language].projects.probem.title,
+          view: true,
+          descreption: languageTexts[language].projects.probem.resumo, //"This project uses ReactJS, Nest and MySQL technologies. The objective is to connect people in precarious situations who need healthcare materials, such as wheelchairs and crutches, with those who can donate these items. With ReactJS, we provide a user-friendly and responsive interface. The Nest framework allows us to create a scalable and modular backend. We use the MySQL database to securely store relevant information.",
+          url: "",
+          code: "https://github.com/generationsaud/probemreact.git",
+          tags: ["ReactJS", "NestJs", "MySQL", "TypeScript", "Material UI"]
         }
       },
+
       {
         id: 4,
         project: {
