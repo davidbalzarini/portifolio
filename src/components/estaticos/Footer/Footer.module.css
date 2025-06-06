@@ -7,13 +7,8 @@
 }
 
 .footer {
-    /* Remover position absolute e width 110% */
-    /* position: absolute; */
-    /* width: 110%; */
-
     border-top: 2px solid var(--green);
-    left: 0; /* se quiser manter, use position: relative ou fixed */
-    
+    left: 0;
     background: var(--background);
     display: flex;
     width: 100%;
@@ -32,7 +27,6 @@
     margin-left: 20px;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .margin {
         margin: 10px 0;

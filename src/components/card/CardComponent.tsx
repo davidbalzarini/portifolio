@@ -9,6 +9,8 @@ import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../estaticos/ThemeToogle/Theme';
 import { Tooltip } from '@mui/material';
 import { TagLabel } from '../tag';
+import { LanguageContext } from '../Idioma/idioma';
+import { languageTexts } from '../Idioma/languageTexts';
 
 interface Projeto {
   project:{
@@ -22,9 +24,18 @@ interface Projeto {
   }
 }
 
-export function CardComponent({project, isHovered}: {project: Projeto['project'], isHovered?: boolean}) {
+export function CardComponent({
+  project,
+  isHovered,
+  onImageClick,
+}: {
+    project: Projeto['project'],
+    isHovered?: boolean,
+    onImageClick?: () => void
+    }) {
 
   const { isDarkMode } = useContext(ThemeContext);
+  const {language} = useContext(LanguageContext);
 
   const [codfonte, setCodfonte] = useState("codigofonte.png");
   
@@ -71,22 +82,19 @@ export function CardComponent({project, isHovered}: {project: Projeto['project']
             muted
             loop
             className="fotocard"
-            style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}
+            onClick={onImageClick}
+            style={{ cursor: 'pointer' }}
           />
         ) : (
           <CardMedia
             component="img"
             image={project.imgUrl}
             alt={project.name}
-            className='card-image'
+            className='fotocard'
           />
         )
       }
       <CardContent>
-        <Typography variant="body2" className='text-card'>
-          {project.descreption}
-        </Typography>
-      </CardContent>
       {project.tags && project.tags.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', margin: '0 0 15px 0', alignItems: 'center', justifyContent: 'center' }}>
           {project.tags.map((tag, index) => (
@@ -94,10 +102,14 @@ export function CardComponent({project, isHovered}: {project: Projeto['project']
           ))}
         </div>
       )}
+        <Typography variant="body2" className='text-card'>
+          {project.descreption}
+        </Typography>
+      </CardContent>
       <div style={{flex: 1}} />
     
       <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>
-      <Tooltip title={!project.url || project.url === "" ?  "Indisponível" : "Ver Projeto"} arrow>
+      <Tooltip title={!project.url || project.url === "" ?  languageTexts[language].projects.indispUrl : languageTexts[language].projects.dispUrl} arrow>
           <span>
             <a
               href={project.url}
@@ -112,15 +124,21 @@ export function CardComponent({project, isHovered}: {project: Projeto['project']
             </a>
           </span>
       </Tooltip>
-      <Tooltip title={!project.code || project.code === "" ?  "Indisponível" : "Ver Projeto"} arrow>
-          <a href={project.code} target="blank"
-          style={{
-            pointerEvents: project.code ? 'auto' : 'none',
-            filter: project.code ? 'none' : 'grayscale(1) opacity(0.5)',
-            transition: 'filter 0.2s'
-          }}>
-            <img className="codfonte br" src={codfonte} alt="" width="30" />
-          </a>
+      <Tooltip title={!project.code || project.code === "" ?  languageTexts[language].projects.indispCodeUrl : languageTexts[language].projects.dispCodeUrl} arrow>
+      <span>
+    <a
+      href={project.code}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        pointerEvents: project.code ? 'auto' : 'none',
+        filter: project.code ? 'none' : 'grayscale(1) opacity(0.5)',
+        transition: 'filter 0.2s'
+      }}
+    >
+      <img className="codfonte br" src={codfonte} alt="" width="30" />
+    </a>
+  </span>
       </Tooltip>
     </div>
     </Card>

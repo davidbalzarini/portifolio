@@ -1,3 +1,5 @@
+
+
 export const languageTexts = {
     en: {
       menu:{
@@ -16,23 +18,27 @@ export const languageTexts = {
       },
       projects:{
           titulo: "Featured Projects",
-          project1:{
+          dispUrl: "View Project",
+          dispCodeUrl: "View Code",
+          indispUrl: "In development", 
+          indispCodeUrl: "This project is in a private repository",
+          naesquina:{
               title: "NaEsquina",
               resumo: "The naesquina project, currently under development, primarily aims to create advantages and facilitate connections between users and local establishments, offering an intuitive and efficient platform for everyone. For the backend, we utilized Java with Spring Boot to build a robust and scalable foundation, while the frontend was developed with ReactJS and TypeScript, ensuring a modern, reactive, and type-safe user interface. For visual components, we opted for the Shadcn UI library, resulting in an elegant and fully responsive design. We have already implemented crucial functionalities such as a unified login system for administrators, users, and establishments, alongside a comprehensive registration process for each profile type. One of the core features is the establishment search based on user location, which uses Google's Geocoding API for greater accuracy. All CRUD (Create, Read, Update, Delete) operations are functional, and we recently added a powerful fuzzy search capability with Apache Lucene, allowing users to find information even with slight variations in their search terms. naesquina continues to evolve, with new features and improvements being constantly integrated."
           },
-          project2:{
+          probem:{
               title: "Probem",
               resumo: "This project uses ReactJS, Nest and MySQL technologies. The objective is to connect people in precarious situations who need healthcare materials, such as wheelchairs and crutches, with those who can donate these items. With ReactJS, we provide a user-friendly and responsive interface. The Nest framework allows us to create a scalable and modular backend. We use the MySQL database to securely store relevant information."
           },
-          project3:{
+          maxlimp:{
               title: "Maxlimp",
               resumo: "'Maxlimp' is a complete e-commerce platform for cleaning products that allows customers to start their orders through the application and complete them via WhatsApp. On the other hand, the Administrator can monitor the entire process of orders, sales, and average ticket values through a dashboard visible only to the Admin. Additionally, the Admin can update order statuses, as well as add, update, and remove orders. Technically, it is a full-stack project. On the backend, there is an API built with Django, featuring complete CRUD functionality and using JWT tokens for user authentication. The frontend is developed with React, chosen for its component-based approach. For styling, the TailwindCSS library was used, along with some components from the Material-UI library to enhance responsiveness."
           },
-          project4:{
+          ignite:{
               title: "Ignite Project",
               resumo: "In the ignite project I learned how to use Vitejs better, which is faster and more flexible than Create-React-App, I also learned how to use css modules and understood iteration better, the application is a kind of feed with comments."
           },
-          project5:{
+          growthhub:{
             title: "Growth-hub",
             resumo: "The GrowthHub platform is designed for education and professional development, allowing users to access courses organized into modules. Users can take quizzes to test their knowledge, and certificates are issued only after completing all modules and achieving a minimum quiz score. Administrators can manage course materials, while managers can monitor their subordinates' performance. The platform uses modern technologies like Vite with React and TypeScript to ensure robust, efficient, and personalized experiences."
           }
@@ -48,7 +54,11 @@ export const languageTexts = {
         nest: "Nest is a framework for Node.js that provides a modular and scalable structure for building robust backend applications. It utilizes dependency injection architecture and the object-oriented design pattern to facilitate the development and maintenance of applications.",
         html:"HTML is the standard markup language for creating web pages. It defines the structure and content of the page, allowing the markup of elements such as headings, paragraphs, images, links, and more. HTML is interpreted by browsers to render web content.",
         css: "CSS is a style language used to define the appearance and layout of elements on a web page. It allows the definition of styles such as colors, fonts, sizes, positioning, and animations, making it possible to customize the appearance of HTML elements.",
-        rn: "React Native is a framework for developing cross-platform mobile applications using JavaScript and React. It allows you to create native applications for iOS and Android with a single codebase, leveraging the reusable components of React.js."
+        rn: "React Native is a framework for developing cross-platform mobile applications using JavaScript and React. It allows you to create native applications for iOS and Android with a single codebase, leveraging the reusable components of React.js.",
+        php: "PHP is one of the world's most popular scripting languages, created specifically for web development. Its key feature is the ability to be embedded directly into HTML, allowing the server to process logic and deliver dynamic pages to the browser. It is the foundation for massive systems like WordPress and, with modern frameworks like Laravel and Symfony, it remains a powerful and relevant tool for creating everything from simple websites to complex applications.",
+        kotlin: "Kotlin is a modern programming language from JetBrains, 100% interoperable with Java, designed to be safer and more concise. Officially adopted by Google, it is the preferred language for Android development and is also prominent in backend applications.",
+        spring: "Spring Boot is a framework that accelerates Java application development by eliminating complex configurations. Through its principles of autoconfiguration, it analyzes project dependencies to automatically set up the application, and opinionated defaults, which provide intelligent settings from the start. This allows for the creation of standalone, production-ready applications in record time, complete with an embedded web server. For this reason, Spring Boot has become the standard tool for building microservices and RESTful APIs, allowing developers to focus on business logic instead of worrying about infrastructure.",
+
       },
       certificates: "Certificates",
       footer: "2023 David Balzarini. All rights reserved."
@@ -74,25 +84,29 @@ export const languageTexts = {
       },
       projects:{
           titulo: "Projetos em destaque",
-          project1:{
+          dispUrl: "Ver projeto",
+          dispCodeUrl: "Ver Código",
+          indispUrl: "Esse projeto está em desenvolvimento", 
+          indispCodeUrl: "Esse projeto está em um repositório privado",
+          naesquina:{
               title: "NaEsquina",
               resumo: "O projeto naesquina, atualmente em desenvolvimento, tem como objetivo principal criar vantagens e facilitar a conexão entre usuários e estabelecimentos locais, oferecendo uma plataforma intuitiva e eficiente para todos. No backend, utilizamos Java com Spring Boot para construir uma base robusta e escalável, enquanto o frontend foi desenvolvido com ReactJS e TypeScript, garantindo uma interface moderna, reativa e segura. Para os componentes visuais, optamos pela biblioteca Shadcn UI, resultando em um design elegante e totalmente responsivo. Já implementamos funcionalidades cruciais como um sistema de login unificado para administradores, usuários e estabelecimentos, além de um processo de registro completo para cada tipo de perfil. Uma das características centrais é a busca de estabelecimentos baseada na localização do usuário, que utiliza a API de Geocoding do Google para maior precisão. Todas as operações CRUD (Criação, Leitura, Atualização e Exclusão) estão funcionais, e recentemente adicionamos uma poderosa busca 'fuzzy' com Apache Lucene, permitindo que os usuários encontrem informações mesmo com pequenas variações nos termos pesquisados. O naesquina continua evoluindo, com novas funcionalidades e aprimoramentos sendo constantemente integrados."
           },
-          project2:{
+          probem:{
               title: "Probem",
               resumo: "Esse projeto utiliza as tecnologias ReactJS, Nest e MySQL. O objetivo é conectar pessoas em situações precárias que precisam de materiais de saúde, como cadeiras de rodas e muletas, com aqueles que podem doar esses itens. Com o ReactJS, oferecemos uma interface amigável e responsiva. O framework Nest nos permite criar um backend escalável e modular. Utilizamos o banco de dados MySQL para armazenar com segurança as informações relevantes."
           },
-          project3:{
-              title: "Blog pessoal",
-              resumo: "“blog pessoal” é um projeto que eu criei para treinar minhass habilidades em frontend e backend. Para o frontend, usei Reactjs e para o backend, usei Nestjs. Além disso, eu usei SQL para o banco de dados. O site permite que os usuários façam postagens, editem postagens, excluam postagens, criem usuários, façam login e delete logins também."
-          },
-          project4:{
+          ignite:{
               title: "Projeto Ignite",
               resumo: "no projeto ignite aprendi a utilizar melhor Vitejs que é mais rapido mais flexivel que o Create-React-App, tambem aprendi a usar css modules e entendi melhor a iteração, a aplicação é uma espécie de feed com comentários"
           },
-          project5:{
+          growthhub:{
             title: "Growth-hub",
             resumo: "A plataforma GrowthHub é projetada para educação e desenvolvimento profissional, permitindo que os usuários acessem cursos organizados em módulos. Os usuários podem realizar quizzes para testar seus conhecimentos, e os certificados são emitidos apenas após a conclusão de todos os módulos e a obtenção de uma pontuação mínima nos quizzes. Os administradores podem gerenciar materiais do curso, enquanto os gestores podem monitorar o desempenho de seus subordinados. A plataforma utiliza tecnologias modernas como Vite com React e TypeScript para garantir experiências robustas, eficientes e personalizadas."
+          },
+          maxlimp:{
+            title: "Maxlimp",
+            resumo: "'Maxlimp' é um ecommerce de produtos de limpeza completo, que permite o cliente iniciar o pedido pela aplicação e finalizar o pedido pelo whatsapp, já o Administrador ele pode acompanhar todo o processo de pedidos, vendas e tickets médios em um dashboard visivel apenas para o Adm, além disso pode alterar o status de pedidos, adicionar, atualizar e remover pedidos também. Tecnicamente é um projeto fullstack, no back temos uma api feita em Django com o CRUD completo e utilização token JWT para autenticação do usuario. Já o front é feito em React, escolhido por causa da sua abordagem baseada em componentes. Para estilização foi utilizado a biblioteca tailwindcss e alguns componentes da biblioteca material ui para facilitar a responsividade",
           }
       },
       conhecimentos:{
@@ -105,7 +119,10 @@ export const languageTexts = {
         nest: "Nest é um framework para Node.js que fornece uma estrutura modular e escalável para a construção de aplicativos back-end robustos. Ele utiliza a arquitetura de injeção de dependência e o padrão de design orientado a objetos para facilitar o desenvolvimento e a manutenção de aplicativos.",
         html:"HTML é a linguagem de marcação padrão para a criação de páginas web. Ela define a estrutura e o conteúdo da página, permitindo a marcação de elementos como títulos, parágrafos, imagens, links e muito mais. O HTML é interpretado pelos navegadores para renderizar o conteúdo web.",
         css: "CSS é uma linguagem de estilo utilizada para definir a aparência e o layout dos elementos em uma página web. Ela permite a definição de estilos como cores, fontes, tamanhos, posicionamento e animações, tornando possível personalizar a aparência dos elementos HTML.",
-        rn: "React Native é um framework para o desenvolvimento de aplicativos móveis multiplataforma usando JavaScript e React. Ele permite criar aplicativos nativos para iOS e Android com uma única base de código, aproveitando os componentes reutilizáveis do React.js."
+        rn: "React Native é um framework para o desenvolvimento de aplicativos móveis multiplataforma usando JavaScript e React. Ele permite criar aplicativos nativos para iOS e Android com uma única base de código, aproveitando os componentes reutilizáveis do React.js.",
+        kotlin: "Kotlin é uma linguagem de programação moderna da JetBrains, 100% interoperável com Java, projetada para ser mais segura e concisa. Adotada oficialmente pelo Google, é a linguagem preferida para o desenvolvimento Android, destacando-se também em aplicações backend.",
+        spring: "O Spring Boot é um framework que acelera o desenvolvimento de aplicações em Java ao eliminar configurações complexas. Através de seus princípios de autoconfiguração, ele analisa as dependências do projeto para configurar a aplicação automaticamente, e de opiniões formadas, que oferecem padrões inteligentes desde o início. Isso permite criar aplicações independentes e prontas para produção em tempo recorde, já com um servidor web embutido. Por essa razão, o Spring Boot se tornou a ferramenta padrão para a construção de microserviços e APIs RESTful, permitindo que os desenvolvedores foquem na lógica de negócio em vez de se preocuparem com a infraestrutura",
+        php: "PHP é uma das linguagens de script mais populares do mundo, criada especialmente para o desenvolvimento web. Sua principal característica é a capacidade de ser embutida diretamente no HTML, permitindo que o servidor processe a lógica e entregue páginas dinâmicas ao navegador. É a base de sistemas gigantes como o WordPress e, com frameworks modernos como Laravel e Symfony, continua sendo uma ferramenta poderosa e relevante para criar desde sites simples até aplicações complexas.",
       },
       certificates: "Certificados",
       footer: "2023 David Balzarini. Todos os direitos reservados." 

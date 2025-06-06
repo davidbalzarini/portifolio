@@ -1,24 +1,39 @@
 import { useContext, useState } from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, LinearProgress } from '@mui/material';
 import { LanguageContext } from '../../components/Idioma/idioma';
 import { ThemeContext } from '../../components/estaticos/ThemeToogle/Theme';
 import { languageTexts } from '../../components/Idioma/languageTexts';
 import { GridLegacy } from '@mui/material';
+
+
+const knowledgeLevels: Record<string, number> = {
+  ts: 90,
+  spring: 80,
+  nest: 75,
+  html: 95,
+  kotlin: 60,
+  react: 80,
+  rn: 70,
+  php: 40,
+};
 
 export default function Conhecimentos() {
   const { isDarkMode } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
 
   const [displayText, setDisplayText] = useState('');
+  const [currentSkill, setCurrentSkill] = useState<string | null>(null);
 
   const texts = languageTexts[language].conhecimentos;
 
-  const handleMouseOver = (text: string) => {
+  const handleMouseOver = (text: string, skillKey: string) => {
     setDisplayText(text);
+    setCurrentSkill(skillKey);
   };
 
   const handleMouseOut = () => {
     setDisplayText('');
+    setCurrentSkill(null);
   };
 
   return (
@@ -49,7 +64,7 @@ export default function Conhecimentos() {
         alignItems="center"
       >
         <GridLegacy item xs={12} sm={12} md={6} lg={6}>
-          {/* Texto superior */}
+
           <Typography
             variant="body1"
             sx={{
@@ -60,8 +75,26 @@ export default function Conhecimentos() {
           >
             {displayText === '' ? texts.none : displayText}
           </Typography>
+          {currentSkill && (
+            <Box sx={{ width: '80%', mx: 'auto', marginBottom: 4 }}>
+              <LinearProgress
+                variant="determinate"
+                value={knowledgeLevels[currentSkill]}
+                sx={{
+                  height: 10,
+                  borderRadius: 5,
+                  backgroundColor: isDarkMode ? '#333' : '#eee',
+                  '& .MuiLinearProgress-bar': {
+                    backgroundColor: '#4caf50',
+                  },
+                }}
+              />
+              <Typography variant="caption" sx={{ display: 'block', textAlign: 'center', marginTop: 1 }}>
+                {knowledgeLevels[currentSkill]}%
+              </Typography>
+            </Box>
+          )}
         </GridLegacy>
-        {/* Grid de habilidades */}
         <GridLegacy item xs={12} sm={12} md={6} lg={6}>
           <GridLegacy
             container
@@ -69,21 +102,8 @@ export default function Conhecimentos() {
             justifyContent="center"
             alignItems="center"
           >
-            {/* Ícones de habilidades */}
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.js)} onMouseOut={handleMouseOut}>
-              <Box
-                component="img"
-                src="js.png"
-                alt="JavaScript"
-                sx={{
-                  width: '100px',
-                  height: '100px',
-                  margin: '0 auto',
-                  display: 'block',
-                }}
-              />
-            </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.ts)} onMouseOut={handleMouseOut}>
+            
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.ts, 'ts')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
                 src="ts.png"
@@ -96,11 +116,11 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.node)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.spring, 'spring')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
-                src="node.png"
-                alt="Node.js"
+                src="spring.svg"
+                alt="Spring icon"
                 sx={{
                   width: '100px',
                   height: '100px',
@@ -109,7 +129,7 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.nest)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.nest, 'nest')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
                 src="nest.png"
@@ -122,7 +142,7 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.html)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.html, 'html')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
                 src="html.png"
@@ -135,11 +155,11 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.css)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.kotlin, 'kotlin')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
-                src="css.png"
-                alt="CSS"
+                src="kotlin-icon.png"
+                alt="Kotlin"
                 sx={{
                   width: '100px',
                   height: '100px',
@@ -148,7 +168,7 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.react)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.react, 'react')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
                 src="react.png"
@@ -161,7 +181,7 @@ export default function Conhecimentos() {
                 }}
               />
             </GridLegacy>
-            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.rn)} onMouseOut={handleMouseOut}>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.rn, 'rn')} onMouseOut={handleMouseOut}>
               <Box
                 component="img"
                 src="reactn.png"
@@ -169,6 +189,19 @@ export default function Conhecimentos() {
                 sx={{
                   width: '100px',
                   height: '100px',
+                  margin: '0 auto',
+                  display: 'block',
+                }}
+              />
+            </GridLegacy>
+            <GridLegacy item xs={6} sm={3} md={3} onMouseOver={() => handleMouseOver(texts.php, 'php')} onMouseOut={handleMouseOut}>
+              <Box
+                component="img"
+                src="php-icon.png"
+                alt="PHP icon"
+                sx={{
+                  width: '120px',
+                  height: '120px',
                   margin: '0 auto',
                   display: 'block',
                 }}

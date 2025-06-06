@@ -16,13 +16,13 @@ export default function Inicio() {
         padding: 4,
         minHeight: '20vh',
         marginTop: {md:10, sm:10, xs:5},
-        marginBottom: {lg:5, md:10, sm:5, xs:3},
+        marginBottom: {lg:5, md:10, sm:5, xs:1},
         justifyContent: 'center',
       }}
     >
       <GridLegacy
         container
-        spacing={4}
+        spacing={{xs: 3, md: 2}}
         alignItems="center"
         justifyContent="center"
         sx={{
@@ -42,12 +42,12 @@ export default function Inicio() {
             }}
           />
         </GridLegacy>
-        <GridLegacy item xs={12} md={6}>
-          <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold' }}>
+        <GridLegacy item xs={12} md={6} sx={{ padding: 0, margin: 0}}>
+          <Typography variant="h3" sx={{ fontSize: { xs: '1.8em', md: '2.5em' }, fontWeight: 'bold', width: '100%' }}>
             {languageTexts[language].inicio.role}
             <span style={{ color: '#4caf50' }}>.</span>
           </Typography>
-          <Typography variant="body1" sx={{ marginTop: 2, fontSize: { xs: '1em', md: '1.2em' } }}>
+          <Typography variant="body1" sx={{ marginTop: 2, fontSize: { xs: '1em', md: '1.2em' },  }}>
             {languageTexts[language].inicio.resume} {languageTexts[language].inicio.programacao}
           </Typography>
 

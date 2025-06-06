@@ -1,24 +1,24 @@
-/* Centraliza a div .inicio */
+
 .inicio {
-    margin: 0 auto; /* Centraliza horizontalmente */
-    width: 90%; /* Usa 90% da largura da tela */
-    max-width: 1200px; /* Limita o tamanho máximo */
-    text-align: center; /* Centraliza o texto dentro da div */
-    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos no cálculo de largura */
+    margin: 0 auto; 
+    width: 90%;
+    max-width: 1200px; 
+    text-align: center; 
+    box-sizing: border-box; 
 }
 .bold {
     font-weight: bold;
 }
 
 .top {
-    margin-top: 20px; /* Ajuste para evitar valores negativos */
+    margin-top: 20px; 
 }
 
 .buttoncurriculo,
 .buttonlinkedin,
 .buttongit {
-    font-size: 18px; /* Ajuste para telas menores */
-    margin: 10px; /* Margem uniforme */
+    font-size: 18px; 
+    margin: 10px; 
     color: var(--green) !important;
     border: 2px solid var(--green);
     padding: 10px 20px;
@@ -44,30 +44,30 @@
 }
 
 .imagemperfil {
-    margin: 0 auto; /* Centraliza a imagem */
-    width: 100%; /* Ajusta para telas menores */
-    max-width: 300px; /* Limita o tamanho máximo */
+    margin: 0 auto; 
+    width: 100%; 
+    max-width: 300px; 
     border-radius: 50%;
     border: 5px solid var(--green);
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* Alinha verticalmente em telas menores */
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px; /* Espaçamento entre os elementos */
+    gap: 20px; 
 }
 
 .divtexto {
-    width: 90%; /* Ajusta para telas menores */
-    max-width: 600px; /* Limita o tamanho máximo */
-    margin: 0 auto; /* Centraliza o texto */
+    width: 90%; 
+    max-width: 600px; 
+    margin: 0 auto; 
     text-align: center;
 }
 
 .h1 {
-    font-size: 2.5em; /* Ajuste para telas menores */
+    font-size: 2.5em; 
     line-height: 1.2;
     font-weight: bold;
     margin: 20px 0;
@@ -75,7 +75,7 @@
 }
 
 .resumo {
-    font-size: 1.2em; /* Ajuste para telas menores */
+    font-size: 1.2em; 
     text-align: center;
     margin: 10px 0;
 }

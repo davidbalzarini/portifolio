@@ -55,9 +55,6 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
                 key={projeto.id}
                 onMouseEnter={() => setHoveredId(projeto.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                onClick={() => {
-                  if (projeto.project.videoUrl) setModalVideo(projeto.project.videoUrl);
-                }}
                 className={`
                   relative
                   flex
@@ -75,10 +72,15 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
                   ${isHovered ? "lg:scale-102 z-10" : ""}
                   ${isOtherHovered ? "lg:blur-sm lg:opacity-30 lg:pointer-events-none" : ""}
                 `}
-                style={{ cursor: projeto.project.videoUrl ? "pointer" : "default" }}
               >
                 <div className="p-2 w-full flex justify-center relative">
-                  <CardComponent project={projeto.project} isHovered={isHovered} />
+                  <CardComponent 
+                    project={projeto.project}
+                    isHovered={isHovered}
+                    onImageClick={() => {
+                      if (projeto.project.videoUrl) setModalVideo(projeto.project.videoUrl);
+                    }}  
+                  />
                 </div>
               </CarouselItem>
             );
@@ -95,8 +97,8 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
 
 
       {modalVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
-          <div className="relative bg-black rounded-lg shadow-lg p-4 max-w-xl w-full">
+        <div onClick={() => setModalVideo(null)} className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+          <div onClick={e => e.stopPropagation()} className="relative bg-black rounded-lg shadow-lg p-4 max-w-xl w-full">
             <button
               className="absolute top-2 right-2 text-white text-2xl"
               onClick={() => setModalVideo(null)}
