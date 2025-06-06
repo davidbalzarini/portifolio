@@ -93,7 +93,7 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
         )}
       </Carousel>
 
-      {/* Modal centralizado para vídeo */}
+
       {modalVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
           <div className="relative bg-black rounded-lg shadow-lg p-4 max-w-xl w-full">

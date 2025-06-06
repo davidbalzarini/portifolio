@@ -23,7 +23,7 @@ function Projetos() {
           view: true,
           url: "",
           code: "",
-          videoUrl: "public/naesquinaVideo.mp4",
+          videoUrl: "/naesquinaVideo.mp4",
           tags: ["ReactJS", "SpringBoot", "Postgree", "TypeScript", "Java", "Kotlin"]
         }
       },
@@ -71,7 +71,7 @@ function Projetos() {
           descreption: languageTexts.en.projects.project1.resumo,
           url: "",
           code: "",
-          videoUrl: "public/naesquinaVideo.mp4",
+          videoUrl: "/naesquinaVideo.mp4",
           tags: ["ReactJS", "SpringBoot", "Postgree", "TypeScript", "Java", "Kotlin"]
         }
       },
