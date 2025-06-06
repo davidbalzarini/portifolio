@@ -66,11 +66,11 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
                   sm:basis-[80vw]
                   md:basis-1/1
                   lg:basis-4/11
-                  transition-transform
+                  transition-all
                   duration-700
                   mx-2
                   ${isHovered ? "lg:scale-102 z-10" : ""}
-                  ${isOtherHovered ? "lg:blur-sm lg:opacity-30 lg:pointer-events-none" : ""}
+                  ${isOtherHovered ? "lg:blur-sm lg:opacity-10 lg:pointer-events-none" : ""}
                 `}
               >
                 <div className="p-2 w-full flex justify-center relative">
