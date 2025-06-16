@@ -16,7 +16,7 @@ export const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<'en' | 'pt'>('en');
+  const [language, setLanguage] = useState<'en' | 'pt'>('pt');
 
   useEffect(() => {
     console.log(`Idioma alterado para: ${language}`);
