@@ -24,7 +24,36 @@ function Projetos() {
         }
       },
       {
-        id: 2,
+        id:2,
+        project: {
+          imgUrl: "flowwork.jpeg",
+          name: languageTexts[language].projects.flowork.title,
+          view: true,
+          descreption: languageTexts[language].projects.flowork.resumo,
+          url: "",
+          code: "",
+          videoUrl: "/flowork.mp4",
+          tags: ["React Native", "Expo", "TypeScript", "Styled Components", "NestJs", "MySQL"]
+
+        }
+      },
+      {
+        id:3,
+        project: {
+          imgUrl: "eco.png",
+          name: languageTexts[language].projects.eco.title,
+          view: true,
+          descreption: languageTexts[language].projects.eco.resumo,
+          url: "http://18.230.76.195/",
+          code: "https://github.com/davidbalzarini/eco-swicth",
+          videoUrl: "/ecovideo.mp4",
+          tags: ["HTML", "CSS", "JavaScript", "PHP", "NodeJs", "MySQL"]
+
+        }
+      },
+
+      {
+        id: 4,
         project: {
           imgUrl: "maxlimp.png",
           name: languageTexts[language].projects.maxlimp.title,
@@ -36,12 +65,12 @@ function Projetos() {
         }
       },
       {
-        id: 3,
+        id: 5,
         project: {
           imgUrl: "probemimg.png",
           name: languageTexts[language].projects.probem.title,
           view: true,
-          descreption: languageTexts[language].projects.probem.resumo, //"This project uses ReactJS, Nest and MySQL technologies. The objective is to connect people in precarious situations who need healthcare materials, such as wheelchairs and crutches, with those who can donate these items. With ReactJS, we provide a user-friendly and responsive interface. The Nest framework allows us to create a scalable and modular backend. We use the MySQL database to securely store relevant information.",
+          descreption: languageTexts[language].projects.probem.resumo, 
           url: "",
           code: "https://github.com/generationsaud/probemreact.git",
           tags: ["ReactJS", "NestJs", "MySQL", "TypeScript", "Material UI"]
@@ -49,7 +78,7 @@ function Projetos() {
       },
 
       {
-        id: 4,
+        id: 6,
         project: {
           imgUrl: "growthhub.png",
           view: true,

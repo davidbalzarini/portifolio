@@ -68,7 +68,7 @@ export function CarouselSize({ projetos }: { projetos: Projeto[] }) {
                   lg:basis-4/11
                   transition-all
                   duration-700
-                  mx-2
+                  m-2
                   ${isHovered ? "lg:scale-102 z-10" : ""}
                   ${isOtherHovered ? "lg:blur-sm lg:opacity-10 lg:pointer-events-none" : ""}
                 `}
